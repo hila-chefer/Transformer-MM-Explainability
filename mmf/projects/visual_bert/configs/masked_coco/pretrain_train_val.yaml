@@ -1,0 +1,16 @@
+includes:
+- ./defaults.yaml
+
+dataset_config:
+  masked_coco:
+    return_features_info: true
+    use_images: false
+    use_features: true
+    features:
+      train:
+      - coco/defaults/features/trainval2014.lmdb
+      - coco/defaults/features/trainval2014.lmdb
+    annotations:
+      train:
+      - coco/defaults/annotations/imdb_karpathy_train_by_image.npy
+      - coco/defaults/annotations/imdb_karpathy_val_by_image.npy

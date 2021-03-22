@@ -1,0 +1,548 @@
+# Dataset zoo defines resources for datasets
+# Each leaf in zoo config defines the parameters
+# to be passed to the mmf.utils.download.DownloadableFile's initialization
+# arguments. A configuration for a dataset can look like
+#
+# [dataset_key]:
+#     [variation]:
+#         version: [str]
+#         resources:
+#            features:
+#            - url:
+#              file_name:
+#              hashcode:
+#              compressed:
+#            - ...
+#            images:
+#            - ...
+#            annotations:
+#            - ...
+#            extras:
+#            - ...
+#
+# Now, if multiple variations are defined then zoo builder will look for zoo_key
+# defined while initialization or it will look for the "defaults" key
+#
+# It is necessary to have "version" and "resources" key on the leaf.
+#
+# "version" key defines the version we are trying to download and it is
+# needed to update files in case something is updated in the dataset.
+#
+# "resources" node can contain selective categories such as "features", "images" etc.
+# which can be used by your dataset or MMFDatasetBuilder to selectively load files
+# based on some conditions.
+#
+# Otherwise, a list can directly be returned under the "resources" node,
+# each of which  will be passed to DownloadableFile class and will be
+# initialized in build method of the MMFDatasetBuilder
+
+mmimdb:
+  version: 1.0_2020_04_16
+  resources:
+    features:
+    - url: mmf://datasets/mmimdb/defaults/features/features.tar.gz
+      file_name: features.tar.gz
+      hashcode: dab8ef859d872fa42f84eb6f710d408929bc35f056ca699b47e8a43d0657f3f1
+    images:
+    - url: https://archive.org/download/mmimdb/mmimdb.tar.gz
+      file_name: mmimdb.tar.gz
+    annotations:
+    - url: mmf://datasets/mmimdb/defaults/annotations/annotations.tar.gz
+      file_name: annotations.tar.gz
+      hashcode: 2c9eed4cc8709cdf77f0e0c25afe595dcd2f39c62a38e5bde8818efe380ab311
+    extras:
+    - url: mmf://datasets/mmimdb/defaults/extras.tar.gz
+      file_name: extras.tar.gz
+      hashcode: 08dd544c152c54ca37330f77d4ed40a29ab0646afea855568e9c0e6ffd86b935
+
+stvqa:
+  defaults:
+    version: 1.0_2020_04_28
+    resources:
+      features:
+      - url: mmf://datasets/stvqa/defaults/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: bdf983470c37b5db2643b61acc5ccbb5d01588d91029c56927a1ee0655bff4b0
+      annotations:
+      - url: mmf://datasets/stvqa/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: c2b1168542babbccb966bd2f33c7e10d2238aa27cfef17d8f447df96056afbe7
+      extras:
+      - url: mmf://datasets/stvqa/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 0f963b083e3f1c8c67b290fdb76cd1d0239f97857a5566d9f8f6b046c77a5b1b
+  ocr_en:
+    version: 1.0_2020_04_28
+    resources:
+      features:
+      - url: mmf://datasets/stvqa/ocr_en/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: f45a7572f013cae16897f2cf93bd062c6b6f9d35d2c6fb2d8067a039019b27b8
+
+textvqa:
+  defaults:
+    version: 0.5.5_2020_06_30
+    resources:
+      features:
+      - url: mmf://datasets/textvqa/defaults/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 960f69c651f5c6532b4e9d8310597aa8d21c65074768c9702ea822e4b2867a0d
+      annotations:
+      - url: mmf://datasets/textvqa/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: a72e43e19b4fd1b4b96e45de71a7d0fab0d860cd36ccf12b597c2c6a202eb10b
+      extras:
+      - url: mmf://datasets/textvqa/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 68dc3b4aeffe4dce24ebb5d373baf0c304fbfbec73f0c1550118a85e90286e38
+  caffe2:
+    version: 0.5.5_2020_04_28
+    resources:
+      features:
+      - url: mmf://datasets/textvqa/defaults/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: f78f6a8e3c7c9c40c8034303457ebcbd5f2bf999cf8aeeba0f6b6f5403dd7bcf
+  ocr_en:
+    version: 0.5.5_2020_04_28
+    resources:
+      features:
+      - url: mmf://datasets/textvqa/ocr_en/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 3542dff9338540ff2add59bb2db290d9ea5f82a4f21ab07fe39351a82b699ee0
+  ocr_ml:
+    version: 0.5.5_2020_04_28
+    resources:
+      features:
+      - url: mmf://datasets/textvqa/ocr_ml/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 98d361e64d88df93483847c3e271b0337e149c6ff1a461e6913809d3457649ce
+
+ocrvqa:
+  defaults:
+    version: 1.0_2020_04_28
+    resources:
+      features:
+      - url: mmf://datasets/ocrvqa/defaults/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 346d302aba4445ab49ff4924c112491541aec59e95b63d2e2c0061a4ae4f3a84
+      annotations:
+      - url: mmf://datasets/ocrvqa/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 885a20440ae5886bf16c1dc98a53a0382c3b370b0950beb546d9e1fd1e5a9e78
+      extras:
+      - url: mmf://datasets/ocrvqa/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: e09ecf613f34569b49ef4c60da0849aa0f9bc8d9853b123be82bf3821414c760
+  ocr_en:
+    version: 1.0_2020_04_28
+    resources:
+      features:
+      - url: mmf://datasets/ocrvqa/ocr_en/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 1c9eb9df544d431f438d340afe493a4d3db759eedd485033f88fc639106edeb8
+
+
+textcaps:
+  defaults:
+    version: 1.0_2020_05_04
+    resources:
+      annotations:
+      - url: mmf://datasets/textcaps/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: cfbe34a0653d18155e5b7de37724888e51c6b0e573fe436bc22ec074338d5456
+      extras:
+      - url: mmf://datasets/textcaps/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 6a92426b646b61eefef8d42ca38bd852375d13c7edd3cf511201633bc16aa14c
+
+coco:
+  defaults:
+    version: 1.0_2020_05_04
+    resources:
+      images:
+      - url: http://images.cocodataset.org/zips/test2015.zip
+        file_name: test2015.zip
+      - url: http://images.cocodataset.org/zips/train2014.zip
+        file_name: train2014.zip
+      - url: http://images.cocodataset.org/zips/val2014.zip
+        file_name: val2014.zip
+      extras:
+      - url: mmf://datasets/coco/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 338f3d798adf91e4a56d2758a076b97503f2d88886db9fae14d4f5dbecb1eb7b
+      features:
+      - url: mmf://datasets/coco/defaults/features/test2015.tar.gz
+        file_name: test2015.tar.gz
+        hashcode: ddfba5d07b01f31456d7e3caeeb03aecc379a45b729992c6efaf1d76c601f072
+      - url: mmf://datasets/coco/defaults/features/trainval2014.tar.gz
+        file_name: trainval2014.tar.gz
+        hashcode: 242b4a2bf3ab930c3275d3ab9b4e1dccd1fb1745d3e939f8d50482d83e1fd1ad
+      - url: mmf://datasets/coco/defaults/features/coco_val2017.tar.gz
+        file_name: coco_val2017.tar.gz
+        hashcode: f9ca8004d59cff6d6cd9b1b2a8c20fdcfd8b69247b8fa85a980769bce07365f3
+      - url: mmf://datasets/coco/defaults/features/coco_train2017.tar.gz
+        file_name: coco_train2017.tar.gz
+        hashcode: 7815fa155f3ab438bbb753bd0ae746add35bafedfbd3db582141c2b99b817ddc
+      annotations:
+      - url: mmf://datasets/coco/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 8861b854eff965d22dd38e331e43886aeab8ac1c99798abf80f935efdf621079
+  subset_val:
+    version: 1.0_2020_05_04
+    resources:
+      images:
+      - url: http://images.cocodataset.org/zips/val2014.zip
+        file_name: val2014.zip
+      - url: http://images.cocodataset.org/zips/test2015.zip
+        file_name: test2015.zip
+      extras:
+      - url: mmf://datasets/coco/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 338f3d798adf91e4a56d2758a076b97503f2d88886db9fae14d4f5dbecb1eb7b
+      features:
+      - url: mmf://datasets/coco/defaults/features/trainval2014.tar.gz
+        file_name: trainval2014.tar.gz
+        hashcode: 242b4a2bf3ab930c3275d3ab9b4e1dccd1fb1745d3e939f8d50482d83e1fd1ad
+      - url: mmf://datasets/coco/defaults/features/test2015.tar.gz
+        file_name: test2015.tar.gz
+        hashcode: ddfba5d07b01f31456d7e3caeeb03aecc379a45b729992c6efaf1d76c601f072
+      annotations:
+      - url: mmf://datasets/coco/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 8861b854eff965d22dd38e331e43886aeab8ac1c99798abf80f935efdf621079
+
+  resnet152:
+    version: 1.0_2020_05_29
+    resources:
+      features:
+      - url: mmf://datasets/coco/resnet152/features/test2015.tar.gz
+        file_name: test2015.tar.gz
+        hashcode: c3e954c56e60137a9cf5a5d46268c91b2e33767f6b0bae0591d8db6b3a25ab18
+      - url: mmf://datasets/coco/resnet152/features/trainval2014.tar.gz
+        file_name: trainval2014.tar.gz
+        hashcode: e253f4ca8f777aeb3f1644de0f4838ac1f12123bbbdeb3e47773290bbe0b2dd4
+
+  m4c_captioner:
+    version: 1.0_2020_05_04
+    resources:
+      features:
+      - url: mmf://datasets/coco/m4c_captioner/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: b36428b7aac2c1b46d4fa75155ea7cd0f9a94444481563c87a5af64dd05e315f
+      annotations:
+      - url: mmf://datasets/coco/m4c_captioner/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 828a7a4310a6eddf2d13b9a6b11ca6877cb988680f2fbc838b600f6d8e4dcbfc
+      extras:
+      - url: mmf://datasets/coco/m4c_captioner/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: a859c41693abb40362b5d0a2d844e612713103ff4fef1159e0351c34e5e6fb46
+
+  ocr_en:
+    version: 1.0_2020_05_04
+    resources:
+      features:
+      - url: mmf://datasets/coco/ocr_en/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 8d4d67e878208568934c2c3fb1c304f5073b5a89a25a59938d182e360e23473f
+
+
+hateful_memes:
+  defaults:
+    version: 1.0_2020_10_01
+    resources:
+      features:
+      - url: mmf://datasets/hateful_memes/defaults/features/features_2020_10_01.tar.gz
+        file_name: features.tar.gz
+        hashcode: ed23243d17485f1c960c073d81420187ab62cbaec2bfa6bc3954ae0252216b73
+      extras:
+      - url: mmf://datasets/hateful_memes/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 1bd88fa36b5c565234cd0bbc20189c85b51a283337bee574db91521be0364739
+
+flickr30k:
+  defaults:
+    version: 1.0_2020_05_29
+    resources:
+      images:
+      - url: https://drive.google.com/uc?export=download&id=0B_PL6p-5reUAZEM4MmRQQ2VVSlk
+        file_name: flickr30_images.tar.gz
+      features:
+      - url: mmf://datasets/flickr30k/defaults/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 679af7902f342480c1e039bb0be3ddabb8b88a4c45a2c17f9b97e4f10689475a
+
+
+visual_entailment:
+  defaults:
+    version: 1.0_2020_05_29
+    # Features and images should be used from flickr30k.defaults as zoo_requirements
+    resources:
+      annotations:
+      - url: mmf://datasets/visual_entailment/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 34432c8c25cce276e65d98272611c1295fc4bfad8da088c4d94285ee2f8ed113
+      extras:
+      - url: mmf://datasets/hateful_memes/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 1bd88fa36b5c565234cd0bbc20189c85b51a283337bee574db91521be0364739
+
+vqa2:
+  defaults:
+    version: 1.0_2020_05_29
+    # Features and images should be used from coco.defaults as zoo_requirements
+    resources:
+      annotations:
+      - url: mmf://datasets/vqa2/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 58daa4b6e5992258049f18a9d7a397e027bdd29388027aad90b41c687024a7b8
+      extras:
+      - url: mmf://datasets/vqa2/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: e45c3dbef61e5cc550b08ed7299c88cf7937efa219d071342b8ed7a6a5642a55
+  grid_features:
+    version: 1.0_2020_06_30
+    # Annotations for grid based features of COCO
+    resources:
+      annotations:
+      - url: mmf://datasets/vqa2/grid/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: f1ac6a587d4719f702bf02cd49725b82ef91bff747eb043527a7b2fecfaee953
+      features:
+      - url: mmf://datasets/vqa2/grid/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 96f4290c6bcbc5767dea5efc44e802667a146769d615dad33944493e3ad638bb
+
+vizwiz:
+  v2019:
+    version: 1.0_2020_05_29
+    resources:
+      annotations:
+      - url: mmf://datasets/vizwiz/2019/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: fd70887e465210391dbcfe0bee8c98c4b1fc39d3ec33c3ea56de04a6cc408c07
+      features:
+      - url: mmf://datasets/vizwiz/2019/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: ad308c9c1dfa48612f58f724fc077c59a7cb05c6f4b048761ecbf3e0de45d2f2
+      extras:
+      - url: mmf://datasets/vizwiz/2019/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 9234e5a11f9bf191d9efcbc67c9f0d704680fb72b282fba31e193c2a4328d51c
+
+cc:
+  defaults:
+    version: 1.0_2020_05_29
+    resources:
+      annotations:
+      - url: mmf://datasets/cc/defaults/annotations//annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: d27794dbc9f415cb9afcffb8887b7b1f23f4ca72bf74e3962c943c7210505627
+      extras:
+      - url: mmf://datasets/cc/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: f286cd1bac978069cec01b93e6f3e9c4ac360225f12e465aa9a6472e7b08c744
+      features:
+      - url: https://dl.fbaipublicfiles.com/pythia/data/datasets/cc/features/lmdbs/cc_train.lmdb/data.mdb
+        file_name: data.mdb
+        dest_folder: cc_train.lmdb
+        compressed: false
+      - url: https://dl.fbaipublicfiles.com/pythia/data/datasets/cc/features/lmdbs/cc_train.lmdb/lock.mdb
+        file_name: lock.mdb
+        dest_folder: cc_train.lmdb
+        compressed: false
+      - url: https://dl.fbaipublicfiles.com/pythia/data/datasets/cc/features/lmdbs/cc_val.lmdb/data.mdb
+        file_name: data.mdb
+        dest_folder: cc_val.lmdb
+        compressed: false
+      - url: https://dl.fbaipublicfiles.com/pythia/data/datasets/cc/features/lmdbs/cc_val.lmdb/lock.mdb
+        file_name: lock.mdb
+        dest_folder: cc_val.lmdb
+        compressed: false
+  coco_generated:
+    version: 1.0_2020_05_29
+    resources:
+      annotations:
+      - url: mmf://datasets/cc/coco_generated/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 8a122c40a656dbc3c5e63117b517e4aeebd8d3b02ee20d84f49da2b1f411fac4
+
+gqa:
+  defaults:
+    version: 1.0_2020_06_22
+    # Features and annotations should be used from gqa.defaults as zoo_requirements
+    resources:
+      annotations:
+      - url: mmf://datasets/gqa/defaults/annotations/annotations.tar.gz
+        file_name: annotations.tar.gz
+        hashcode: 4f8ab86697d5f81749ca87cee8971885b8e788b4a22c0c92fd15aae516a739da
+      extras:
+      - url: mmf://datasets/gqa/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 5ace42896d06aaefc1ac1540fb58d38d8db0884bc48c8f85070a90811676cd8d
+      features:
+      - url: mmf://datasets/gqa/defaults/features/features.tar.gz
+        file_name: features.tar.gz
+        hashcode: 530e62e398faa5c9f2d4f7edc2223cce4a679b2837fa4252976f0eff4127f9ce
+
+
+okvqa:
+  defaults:
+    version: 1.0_2020_07_16
+    resources:
+      images:
+      - url: mmf://datasets/okvqa/defaults/images/images.tar.gz
+        file_name: images.tar.gz
+        hashcode: 674380cee4285a495c398fe9265224052b04454e4599d56b844f0453140ea82f
+      extras:
+      - url: mmf://datasets/okvqa/defaults/extras.tar.gz
+        file_name: extras.tar.gz
+        hashcode: 9a1cc2f2abedcee494917fae853069d8e465dad050307221b7969c9d65ed1b45
+      annotations:
+      - url: https://okvqa.allenai.org/static/data/mscoco_train2014_annotations.json.zip
+        file_name: mscoco_train2014_annotations.json.zip
+      - url: https://okvqa.allenai.org/static/data/mscoco_val2014_annotations.json.zip
+        file_name: mscoco_val2014_annotations.json.zip
+      - url: https://okvqa.allenai.org/static/data/OpenEnded_mscoco_train2014_questions.json.zip
+        file_name: OpenEnded_mscoco_train2014_questions.json.zip
+      - url: https://okvqa.allenai.org/static/data/OpenEnded_mscoco_val2014_questions.json.zip
+        file_name: OpenEnded_mscoco_val2014_questions.json.zip
+
+
+vqacp_v2:
+  defaults:
+    version: 1.0_2020_08_02
+    # Images should be used from coco.defaults, extras should be used from vqa2 as zoo_requirements
+    resources:
+      annotations:
+        - url: https://computing.ece.vt.edu/~aish/vqacp/vqacp_v2_train_annotations.json
+          file_name: vqacp_v2_train_annotations.json
+          compressed: false
+        - url: https://computing.ece.vt.edu/~aish/vqacp/vqacp_v2_train_questions.json
+          file_name: vqacp_v2_train_questions.json
+          compressed: false
+        - url: https://computing.ece.vt.edu/~aish/vqacp/vqacp_v2_test_annotations.json
+          file_name: vqacp_v2_test_annotations.json
+          compressed: false
+        - url: https://computing.ece.vt.edu/~aish/vqacp/vqacp_v2_test_questions.json
+          file_name: vqacp_v2_test_questions.json
+          compressed: false
+
+ade20k:
+  defaults:
+    version: 1.0_2020_09_14
+    resources:
+      features:
+        - url: mmf://datasets/ade20k/defaults/features/ade20k_train_features.tar.gz
+          file_name: ade20k_train_features.tar.gz
+          hashcode: 723750c87a4ea374424bf3c45ff1bbfdd5baee3ba45141a21e266d6adf9dc906
+          compressed: true
+        - url: mmf://datasets/ade20k/defaults/features/ade20k_val_features.tar.gz
+          file_name: ade20k_val_features.tar.gz
+          hashcode: 3cb968ec4ae62dcc58f38476afd5e3dcb171387ef3fb2f0c37aee1d418f1f4c2
+          compressed: true
+
+localized_narratives:
+  defaults:
+    version: 1.0_2020_09_14
+    resources:
+      features:
+        - url: mmf://datasets/localized_narratives/defaults/features/ln_open_images_train_features.tar.gz
+          file_name: ln_open_images_train_features.tar.gz
+          hashcode: 2f664c3d31da2772f2bc7303b2f88454b814f0f528618df06514c55f127585ec
+          compressed: true
+        - url: mmf://datasets/localized_narratives/defaults/features/open_images_val.tar.gz
+          file_name: open_images_val.tar.gz
+          hashcode: 8b500f64f55cc50544ddc051b57397104749ab95374fedc7c27cffe7af76222c
+          compressed: true
+        - url: mmf://datasets/localized_narratives/defaults/features/open_images_test.tar.gz
+          file_name: open_images_test.tar.gz
+          hashcode: 18a91a9dfd5ed93fc7f416360ec6723ac929109f4821b5889b12d7e430e972e0
+          compressed: true
+      annotations:
+        - url: https://storage.googleapis.com/localized-narratives/annotations/flickr30k_test_localized_narratives.jsonl
+          file_name: flickr30k_test_localized_narratives.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_validation_localized_narratives.jsonl
+          file_name: open_images_validation_localized_narratives.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/coco_val_localized_narratives.jsonl
+          file_name: coco_val_localized_narratives.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/flickr30k_val_localized_narratives.jsonl
+          file_name: flickr30k_val_localized_narratives.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/ade20k_train_localized_narratives.jsonl
+          file_name: ade20k_train_localized_narratives.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/coco_train_localized_narratives-00000-of-00004.jsonl
+          file_name: coco_train_localized_narratives-00000-of-00004.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/coco_train_localized_narratives-00001-of-00004.jsonl
+          file_name: coco_train_localized_narratives-00001-of-00004.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/coco_train_localized_narratives-00002-of-00004.jsonl
+          file_name: coco_train_localized_narratives-00002-of-00004.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/coco_train_localized_narratives-00003-of-00004.jsonl
+          file_name: coco_train_localized_narratives-00003-of-00004.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/flickr30k_train_localized_narratives.jsonl
+          file_name: flickr30k_train_localized_narratives.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00000-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00000-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00001-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00001-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00002-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00002-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00003-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00003-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00004-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00004-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00005-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00005-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00006-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00006-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00007-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00007-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00008-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00008-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_train_v6_localized_narratives-00009-of-00010.jsonl
+          file_name: open_images_train_v6_localized_narratives-00009-of-00010.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/ade20k_validation_localized_narratives.jsonl
+          file_name: ade20k_validation_localized_narratives.jsonl
+          compressed: false
+        - url: https://storage.googleapis.com/localized-narratives/annotations/open_images_test_localized_narratives.jsonl
+          file_name: open_images_test_localized_narratives.jsonl
+          compressed: false
+
+
+vqa_hat:
+  defaults:
+    version: 1.0_2020_07_16
+    resources:
+      images:
+        - url: https://computing.ece.vt.edu/~abhshkdz/data/vqahat/vqahat_train.zip
+          file_name: vqahat_train.zip
+        - url: https://computing.ece.vt.edu/~abhshkdz/data/vqahat/vqahat_val.zip
+          file_name: vqahat_val.zip
+      annotations:
+        - url: https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/Annotations_Train_mscoco.zip
+          file_name: Annotations_Train_mscoco.zip
+        - url: https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/Annotations_Val_mscoco.zip
+          file_name: Annotations_Val_mscoco.zip
+        - url: https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/Questions_Train_mscoco.zip
+          file_name: Questions_Train_mscoco.zip
+        - url: https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/Questions_Val_mscoco.zip
+          file_name: Questions_Val_mscoco.zip

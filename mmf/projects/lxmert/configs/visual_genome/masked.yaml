@@ -1,0 +1,13 @@
+dataset_config:
+  masked_visual_genome:
+    use_features: true
+    add_answer: true
+    max_features: 36
+    features:
+        train:
+        - visual_genome/detectron_fix_100/fc6/,visual_genome/resnet152/
+        - visual_genome/detectron_fix_100/fc6/,visual_genome/resnet152/
+    annotations:
+        train:
+        - imdb/visual_genome/vg_question_answers.jsonl
+        - imdb/visual_genome/vg_question_answers_placeholder.jsonl

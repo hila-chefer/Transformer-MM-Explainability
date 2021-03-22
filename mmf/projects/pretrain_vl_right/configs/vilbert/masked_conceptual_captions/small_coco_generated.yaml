@@ -1,0 +1,13 @@
+includes:
+- ../projects/vilbert/configs/masked_conceptual_captions/pretrain.yaml
+
+dataset_config:
+  masked_conceptual_captions:
+    zoo_requirements:
+    - cc.coco_generated
+    - cc.defaults
+    annotations:
+      train:
+      - cc/coco_generated/annotations/train_small.npy
+      val:
+      - cc/coco_generated/annotations/val.npy

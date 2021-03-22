@@ -1,0 +1,57 @@
+dataset_config:
+  vqa2:
+    return_features_info: true
+    use_images: false
+    use_features: true
+    processors:
+        text_processor:
+          type: bert_tokenizer
+          params:
+            tokenizer_config:
+              type: bert-base-uncased
+              params:
+                do_lower_case: true
+            mask_probability: 0
+            max_seq_length: 128
+
+model_config:
+  mmf_bert:
+    training_head_type: vqa
+    losses:
+    - type: logit_bce
+
+optimizer:
+  type: adam_w
+  params:
+    lr: 5e-5
+    eps: 1e-8
+
+scheduler:
+  type: warmup_linear
+  params:
+    num_warmup_steps: 2400
+    num_training_steps: 24000
+
+evaluation:
+  metrics:
+  - vqa_accuracy
+
+training:
+  batch_size: 512
+  lr_scheduler: true
+  # Don't forget to update schedule_attributes if you update this
+  max_updates: 24000
+  early_stop:
+    criteria: vqa2/vqa_accuracy
+    minimize: false
+
+checkpoint:
+  pretrained_state_mapping:
+    word_embedding: word_embedding
+    text_embedding: text_embedding
+    image_feature_projection: image_feature_projection
+    image_feature_encoders: image_feature_encoders
+    image_feature_embeddings_list: image_feature_embeddings_list
+    image_feature_intra_attention: image_feature_intra_attention
+    image_text_multi_modal_combine_layer: image_text_multi_modal_combine_layer
+    pooler: pooler

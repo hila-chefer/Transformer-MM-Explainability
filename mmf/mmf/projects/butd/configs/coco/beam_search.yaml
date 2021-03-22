@@ -1,0 +1,12 @@
+includes:
+- ./defaults.yaml
+
+model_config:
+  butd:
+    inference:
+      type: beam_search
+      params:
+        beam_length: 5
+
+training:
+  batch_size: 1

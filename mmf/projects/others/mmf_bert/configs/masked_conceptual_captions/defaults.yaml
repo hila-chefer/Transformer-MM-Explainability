@@ -1,0 +1,6 @@
+includes:
+- ../masked_coco/pretrain.yaml
+
+dataset_config:
+  masked_conceptual_captions:
+    return_features_info: true

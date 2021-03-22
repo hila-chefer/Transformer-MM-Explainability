@@ -1,0 +1,40 @@
+includes:
+- ./defaults.yaml
+
+dataset_config:
+  vqa2:
+    use_images: false
+    use_features: true
+    zoo_requirements:
+    - coco.defaults
+    - vqa2.defaults
+    features:
+      train:
+      - coco/defaults/features/trainval2014.lmdb
+      - coco/defaults/features/trainval2014.lmdb
+      val:
+      - coco/defaults/features/trainval2014.lmdb
+      test:
+      - coco/defaults/features/test2015.lmdb
+    annotations:
+      train:
+      - vqa2/defaults/annotations/imdb_train2014.npy
+      - vqa2/defaults/annotations/imdb_val2014.npy
+      val:
+      - vqa2/defaults/annotations/imdb_minival2014.npy
+
+model_config:
+  pythia:
+    image_feature_encodings:
+    - type: finetune_faster_rcnn_fpn_fc7
+      params:
+        bias_file: models/detectron.defaults/fc7_b.pkl
+        weights_file: models/detectron.defaults/fc7_w.pkl
+
+training:
+  max_updates: 12000
+  lr_steps:
+  - 5000
+  - 7000
+  - 9000
+  - 11000

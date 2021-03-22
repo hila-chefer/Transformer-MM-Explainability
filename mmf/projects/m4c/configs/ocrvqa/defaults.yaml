@@ -1,0 +1,94 @@
+model_config:
+  m4c:
+    losses:
+    - type: m4c_decoding_bce_with_mask
+
+dataset_config:
+  ocrvqa:
+    zoo_requirements:
+    - ocrvqa.defaults
+    - ocrvqa.ocr_en
+    features:
+      train:
+      - ocrvqa/defaults/features/detectron.lmdb,ocrvqa/ocr_en/features/ocr_en_frcn_features.lmdb
+      val:
+      - ocrvqa/defaults/features/detectron.lmdb,ocrvqa/ocr_en/features/ocr_en_frcn_features.lmdb
+      test:
+      - ocrvqa/defaults/features/detectron.lmdb,ocrvqa/ocr_en/features/ocr_en_frcn_features.lmdb
+    processors:
+      text_processor:
+        type: bert_tokenizer
+        params:
+          tokenizer_config:
+            type: bert-base-uncased
+            params:
+              do_lower_case: true
+          max_seq_length: 20
+      answer_processor:
+        type: m4c_answer
+        params:
+          vocab_file: ocrvqa/defaults/extras/vocabs/fixed_answer_vocab_ocrvqa_82.txt
+          preprocessor:
+            type: simple_word
+            params: {}
+          context_preprocessor:
+            type: simple_word
+            params: {}
+          max_length: 50
+          max_copy_steps: 12
+          num_answers: 10
+      copy_processor:
+        type: copy
+        params:
+          max_length: 100
+      phoc_processor:
+        type: phoc
+        params:
+          max_length: 50
+      context_processor:
+        type: fasttext
+        params:
+          max_length: 50
+          model_file: wiki.en.bin
+      ocr_token_processor:
+        type: simple_word
+        params: {}
+      bbox_processor:
+        type: bbox
+        params:
+          max_length: 50
+    return_features_info: true
+    use_ocr: true
+    use_ocr_info: true
+    use_order_vectors: true
+
+optimizer:
+  params:
+    eps: 1.0e-08
+    lr: 1e-4
+    weight_decay: 0
+  type: Adam
+
+evaluation:
+  metrics:
+  - ocrvqa_accuracy
+
+training:
+    clip_norm_mode: all
+    clip_gradients: true
+    max_grad_l2_norm: 0.25
+    lr_scheduler: true
+    lr_steps:
+    - 28000
+    - 38000
+    lr_ratio: 0.1
+    use_warmup: true
+    warmup_factor: 0.2
+    warmup_iterations: 1000
+    max_updates: 48000
+    batch_size: 128
+    num_workers: 4
+    task_size_proportional_sampling: true
+    early_stop:
+      criteria: ocrvqa/ocrvqa_accuracy
+      minimize: false

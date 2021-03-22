@@ -1,0 +1,26 @@
+includes:
+- ./defaults.yaml
+
+dataset_config:
+  vqa2:
+    use_images: false
+    use_features: true
+    features:
+      train:
+      - coco/defaults/features/coco_trainval2014.lmdb
+      - coco/defaults/features/coco_trainval2014.lmdb
+    annotations:
+      train:
+      - vqa2/defaults/annotations/imdb_train2014.npy
+      - vqa2/defaults/annotations/imdb_val2014.npy
+    return_features_info: true
+    processors:
+      text_processor:
+        type: bert_tokenizer
+        params:
+          tokenizer_config:
+            type: bert-base-uncased
+            params:
+              do_lower_case: true
+          mask_probability: 0
+          max_seq_length: 128

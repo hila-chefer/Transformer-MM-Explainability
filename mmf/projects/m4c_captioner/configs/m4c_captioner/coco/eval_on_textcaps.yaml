@@ -1,0 +1,21 @@
+includes:
+- ./defaults.yaml
+
+dataset_config:
+  textcaps:
+    zoo_requirements:
+    - textvqa.defaults
+    - textvqa.ocr_en
+    - textcaps.defaults
+    use_images: false
+    use_features: true
+    features:
+      val:
+      - textvqa/defaults/features/open_images/detectron.lmdb,textvqa/ocr_en/features/ocr_en_frcn_features.lmdb
+      test:
+      - textvqa/defaults/features/open_images/detectron.lmdb,textvqa/ocr_en/features/ocr_en_frcn_features.lmdb
+    annotations:
+      val:
+      - textcaps/defaults/annotations/imdb_val_filtered_by_image_id.npy  # only one sample per image_id
+      test:
+      - textcaps/defaults/annotations/imdb_test_filtered_by_image_id.npy  # only one sample per image_id

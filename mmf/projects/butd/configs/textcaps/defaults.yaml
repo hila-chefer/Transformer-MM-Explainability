@@ -1,0 +1,80 @@
+dataset_config:
+  textcaps:
+    annotation_style: coco
+    use_images: false
+    use_features: true
+    zoo_requirements:
+    - textvqa.defaults
+    - textcaps.defaults
+    features:
+      train:
+      - textvqa/defaults/features/open_images/detectron.lmdb
+      val:
+      - textvqa/defaults/features/open_images/detectron.lmdb
+      test:
+      - textvqa/defaults/features/open_images/detectron.lmdb
+    annotations:
+      train:
+      - textcaps/defaults/annotations/imdb_train.npy
+      val:
+      - textcaps/defaults/annotations/imdb_val.npy
+      test:
+      - textcaps/defaults/annotations/imdb_test_filtered_by_image_id.npy
+    processors:
+      text_processor:
+        type: vocab
+        params:
+          max_length: 52
+          vocab:
+            type: intersected
+            embedding_name: glove.6B.300d
+            vocab_file: textcaps/defaults/extras/vocabs/vocab_textcaps_threshold_10.txt
+          preprocessor:
+            type: simple_sentence
+            params: {}
+      caption_processor:
+        type: caption
+        params:
+          vocab:
+            type: intersected
+            embedding_name: glove.6B.300d
+            vocab_file: textcaps/defaults/extras/vocabs/vocab_textcaps_threshold_10.txt
+    min_captions_per_img: 5
+    tile_captions_to_match_min_num: true
+    remove_unk_from_caption_prediction: true
+    return_features_info: false
+    # Return OCR information
+    use_ocr: false
+    # Return spatial information of OCR tokens if present
+    use_ocr_info: false
+
+optimizer:
+  type: Adamax
+  params:
+    eps: 1.0e-08
+    lr: 0.01
+    weight_decay: 0
+
+evaluation:
+  metrics:
+  - caption_bleu4
+
+training:
+  clip_norm_mode: all
+  clip_gradients: true
+  lr_ratio: 0.1
+  lr_scheduler: true
+  lr_steps:
+  - 14000
+  - 19000
+  max_grad_l2_norm: 0.25
+  max_iterations: 24000
+  use_warmup: true
+  warmup_factor: 0.2
+  warmup_iterations: 1000
+  batch_size: 256
+  num_workers: 7
+  task_size_proportional_sampling: true
+  early_stop:
+    criteria: textcaps/caption_bleu4
+    minimize: false

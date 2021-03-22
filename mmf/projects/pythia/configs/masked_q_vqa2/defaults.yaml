@@ -1,0 +1,11 @@
+includes:
+- ./pythia.yaml
+
+evaluation:
+  metrics:
+  - accuracy
+
+training:
+  early_stop:
+    criteria: masked_q_vqa2/accuracy
+    minimize: false
