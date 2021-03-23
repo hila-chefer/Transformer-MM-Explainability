@@ -11,10 +11,10 @@ from dataclasses import dataclass
 from typing import Dict, Optional, Union
 
 import torch
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.models.interfaces.mmbt import MMBTGridHMInterface
-from mmf.modules.encoders import (
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.models.interfaces.mmbt import MMBTGridHMInterface
+from VisualBERT.mmf.modules.encoders import (
     EncoderFactory,
     ImageEncoderFactory,
     ImageEncoderTypes,
@@ -24,10 +24,10 @@ from mmf.modules.encoders import (
     TextEncoderTypes,
     TransformerEncoder,
 )
-from mmf.modules.hf_layers import replace_with_jit
-from mmf.utils.checkpoint import load_pretrained_model
-from mmf.utils.configuration import get_mmf_cache_dir
-from mmf.utils.modeling import get_optimizer_parameters_for_bert
+from VisualBERT.mmf.modules.hf_layers import replace_with_jit
+from VisualBERT.mmf.utils.checkpoint import load_pretrained_model
+from VisualBERT.mmf.utils.configuration import get_mmf_cache_dir
+from VisualBERT.mmf.utils.modeling import get_optimizer_parameters_for_bert
 from omegaconf import II, DictConfig, OmegaConf
 from torch import Tensor, nn
 from transformers.modeling_bert import BertForPreTraining, BertPredictionHeadTransform

@@ -3,7 +3,7 @@
 import unittest
 
 import torch
-from mmf.trainers.mmf_trainer import MMFTrainer
+from VisualBERT.mmf.trainers.mmf_trainer import MMFTrainer
 from tests.test_utils import SimpleModel, skip_if_no_cuda
 from tests.trainers.test_training_loop import TrainerTrainingLoopMock
 

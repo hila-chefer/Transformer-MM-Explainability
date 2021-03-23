@@ -5,10 +5,10 @@ import math
 
 import torch
 import torch.nn.functional as F
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.modules.layers import ClassifierLayer
-from mmf.utils.build import build_image_encoder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.modules.layers import ClassifierLayer
+from VisualBERT.mmf.utils.build import build_image_encoder
 from omegaconf import OmegaConf
 from torch import nn
 from transformers.modeling_bert import (

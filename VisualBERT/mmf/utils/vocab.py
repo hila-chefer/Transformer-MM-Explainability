@@ -5,10 +5,10 @@ from collections import defaultdict
 
 import numpy as np
 import torch
-from mmf.utils.configuration import get_mmf_cache_dir
-from mmf.utils.distributed import is_master, synchronize
-from mmf.utils.file_io import PathManager
-from mmf.utils.general import get_absolute_path
+from VisualBERT.mmf.utils.configuration import get_mmf_cache_dir
+from VisualBERT.mmf.utils.distributed import is_master, synchronize
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.general import get_absolute_path
 from torchtext import vocab
 
 

@@ -4,7 +4,7 @@ import argparse
 import json
 import os
 
-from mmf.datasets.processors.processors import EvalAIAnswerProcessor
+from VisualBERT.mmf.datasets.processors.processors import EvalAIAnswerProcessor
 
 
 def get_score(occurences):

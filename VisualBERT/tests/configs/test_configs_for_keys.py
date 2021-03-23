@@ -4,9 +4,9 @@ import unittest
 import warnings
 from io import StringIO
 
-from mmf.common.registry import registry
-from mmf.utils.configuration import Configuration
-from mmf.utils.env import setup_imports
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.utils.configuration import Configuration
+from VisualBERT.mmf.utils.env import setup_imports
 from tests.test_utils import dummy_args
 
 

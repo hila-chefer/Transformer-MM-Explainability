@@ -7,11 +7,11 @@ from typing import Type, Union
 
 import torch
 import torchvision.datasets.folder as tv_helpers
-from mmf.common import typings as mmf_typings
-from mmf.common.sample import Sample, SampleList
-from mmf.models.base_model import BaseModel
-from mmf.utils.build import build_processors
-from mmf.utils.download import download
+from VisualBERT.mmf.common import typings as mmf_typings
+from VisualBERT.mmf.common.sample import Sample, SampleList
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.utils.build import build_processors
+from VisualBERT.mmf.utils.download import download
 from PIL import Image
 from torch import nn
 
@@ -45,7 +45,7 @@ class MMBTGridHMInterface(nn.Module):
         Image can be a url or a local path or you can directly pass a PIL.Image.Image
         object. Text needs to be a sentence containing all text in the image.
 
-            >>> from mmf.models.mmbt import MMBT
+            >>> from VisualBERT.mmf.models.mmbt import MMBT
             >>> model = MMBT.from_pretrained("mmbt.hateful_memes.images")
             >>> model.classify("some_url", "some_text")
             {"label": 0, "confidence": 0.56}

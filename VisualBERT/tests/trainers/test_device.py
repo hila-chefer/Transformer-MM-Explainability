@@ -2,8 +2,8 @@
 import unittest
 
 import torch
-from mmf.trainers.core.device import TrainerDeviceMixin
-from mmf.utils.general import get_current_device
+from VisualBERT.mmf.trainers.core.device import TrainerDeviceMixin
+from VisualBERT.mmf.utils.general import get_current_device
 from omegaconf import OmegaConf
 
 

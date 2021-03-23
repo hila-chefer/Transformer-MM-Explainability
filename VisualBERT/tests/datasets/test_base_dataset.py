@@ -2,9 +2,9 @@
 import os
 import unittest
 
-from mmf.common.registry import registry
-from mmf.datasets.base_dataset import BaseDataset
-from mmf.utils.configuration import Configuration
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.base_dataset import BaseDataset
+from VisualBERT.mmf.utils.configuration import Configuration
 
 from ..test_utils import dummy_args
 

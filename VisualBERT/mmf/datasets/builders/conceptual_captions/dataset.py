@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import torch
-from mmf.common.sample import Sample
-from mmf.datasets.builders.coco import COCODataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.builders.coco import COCODataset
 
 
 class ConceptualCaptionsDataset(COCODataset):

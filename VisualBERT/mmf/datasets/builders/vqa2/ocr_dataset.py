@@ -1,6 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.datasets.builders.vizwiz import VizWizDataset
-from mmf.utils.text import word_tokenize
+from VisualBERT.mmf.datasets.builders.vizwiz import VizWizDataset
+from VisualBERT.mmf.utils.text import word_tokenize
 
 
 class VQA2OCRDataset(VizWizDataset):

@@ -4,7 +4,7 @@ import unittest
 
 import numpy as np
 import tests.test_utils as test_utils
-from mmf.models.mmbt import MMBT
+from VisualBERT.mmf.models.mmbt import MMBT
 
 
 class TestModelInterfaces(unittest.TestCase):

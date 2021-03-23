@@ -3,12 +3,12 @@ import os
 
 import numpy as np
 import torch
-from mmf.common.registry import registry
-from mmf.common.sample import Sample
-from mmf.datasets.base_dataset import BaseDataset
-from mmf.utils.distributed import is_master, synchronize
-from mmf.utils.general import get_mmf_root
-from mmf.utils.text import VocabFromText, tokenize
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.base_dataset import BaseDataset
+from VisualBERT.mmf.utils.distributed import is_master, synchronize
+from VisualBERT.mmf.utils.general import get_mmf_root
+from VisualBERT.mmf.utils.text import VocabFromText, tokenize
 from PIL import Image
 
 

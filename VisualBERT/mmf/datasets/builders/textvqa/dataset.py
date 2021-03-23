@@ -1,10 +1,10 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import numpy as np
 import torch
-from mmf.common.sample import Sample
-from mmf.datasets.mmf_dataset import MMFDataset
-from mmf.utils.distributed import byte_tensor_to_object, object_to_byte_tensor
-from mmf.utils.text import word_tokenize
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.mmf_dataset import MMFDataset
+from VisualBERT.mmf.utils.distributed import byte_tensor_to_object, object_to_byte_tensor
+from VisualBERT.mmf.utils.text import word_tokenize
 
 
 class TextVQADataset(MMFDataset):

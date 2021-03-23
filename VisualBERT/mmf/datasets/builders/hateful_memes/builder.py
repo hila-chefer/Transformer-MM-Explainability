@@ -3,15 +3,15 @@
 import os
 import warnings
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.hateful_memes.dataset import (
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.hateful_memes.dataset import (
     HatefulMemesFeaturesDataset,
     HatefulMemesImageDataset,
 )
-from mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
-from mmf.utils.configuration import get_mmf_env
-from mmf.utils.file_io import PathManager
-from mmf.utils.general import get_absolute_path
+from VisualBERT.mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
+from VisualBERT.mmf.utils.configuration import get_mmf_env
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.general import get_absolute_path
 
 
 @registry.register_builder("hateful_memes")

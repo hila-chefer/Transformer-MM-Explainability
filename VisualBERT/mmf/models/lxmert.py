@@ -18,10 +18,10 @@
 import os
 
 import torch
-from mmf.common.registry import registry
-from mmf.models import BaseModel
-from mmf.utils.configuration import get_mmf_cache_dir
-from mmf.utils.modeling import get_optimizer_parameters_for_bert
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models import BaseModel
+from VisualBERT.mmf.utils.configuration import get_mmf_cache_dir
+from VisualBERT.mmf.utils.modeling import get_optimizer_parameters_for_bert
 from omegaconf import OmegaConf
 from torch import nn
 from torch.nn import CrossEntropyLoss, SmoothL1Loss

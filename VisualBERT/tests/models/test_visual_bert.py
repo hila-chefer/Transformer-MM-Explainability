@@ -4,11 +4,11 @@ import unittest
 
 import tests.test_utils as test_utils
 import torch
-from mmf.common.sample import SampleList
-from mmf.modules.hf_layers import replace_with_jit
-from mmf.utils.build import build_model
-from mmf.utils.configuration import Configuration
-from mmf.utils.env import setup_imports
+from VisualBERT.mmf.common.sample import SampleList
+from VisualBERT.mmf.modules.hf_layers import replace_with_jit
+from VisualBERT.mmf.utils.build import build_model
+from VisualBERT.mmf.utils.configuration import Configuration
+from VisualBERT.mmf.utils.env import setup_imports
 
 
 BERT_VOCAB_SIZE = 30255

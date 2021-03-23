@@ -4,8 +4,8 @@ import os
 import unittest
 from unittest.mock import MagicMock
 
-from mmf.datasets.base_dataset import BaseDataset
-from mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
+from VisualBERT.mmf.datasets.base_dataset import BaseDataset
+from VisualBERT.mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
 from omegaconf import OmegaConf
 
 

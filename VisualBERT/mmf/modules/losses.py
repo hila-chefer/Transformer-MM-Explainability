@@ -6,7 +6,7 @@ MMF using the following example.
 
 .. code::
 
-   from mmf.common.registry import registry
+   from VisualBERT.mmf.common.registry import registry
    from torch import nn
 
 
@@ -32,7 +32,7 @@ from typing import Dict
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from mmf.common.registry import registry
+from VisualBERT.mmf.common.registry import registry
 from torch import Tensor
 from torch.nn.utils.rnn import pack_padded_sequence
 

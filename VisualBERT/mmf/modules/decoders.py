@@ -1,6 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import torch
-from mmf.common.registry import registry
+from VisualBERT.mmf.common.registry import registry
 from torch import nn
 from torch.nn.utils.weight_norm import weight_norm
 

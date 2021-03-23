@@ -6,9 +6,9 @@ and more granular
 import logging
 
 import numpy as np
-from mmf.utils.build import build_dataloader_and_sampler, build_dataset
-from mmf.utils.distributed import broadcast_scalar, is_dist_initialized, is_master
-from mmf.utils.general import get_batch_size, get_current_device
+from VisualBERT.mmf.utils.build import build_dataloader_and_sampler, build_dataset
+from VisualBERT.mmf.utils.distributed import broadcast_scalar, is_dist_initialized, is_master
+from VisualBERT.mmf.utils.general import get_batch_size, get_current_device
 
 
 logger = logging.getLogger(__name__)

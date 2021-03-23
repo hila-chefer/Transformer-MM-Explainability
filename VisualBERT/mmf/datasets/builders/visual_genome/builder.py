@@ -3,12 +3,12 @@ import logging
 import os
 import shutil
 
-from mmf.common.constants import VISUAL_GENOME_CONSTS
-from mmf.common.registry import registry
-from mmf.datasets.builders.visual_genome.dataset import VisualGenomeDataset
-from mmf.datasets.builders.vqa2.builder import VQA2Builder
-from mmf.utils.download import decompress, download
-from mmf.utils.general import get_mmf_root
+from VisualBERT.mmf.common.constants import VISUAL_GENOME_CONSTS
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.visual_genome.dataset import VisualGenomeDataset
+from VisualBERT.mmf.datasets.builders.vqa2.builder import VQA2Builder
+from VisualBERT.mmf.utils.download import decompress, download
+from VisualBERT.mmf.utils.general import get_mmf_root
 
 
 logger = logging.getLogger(__name__)

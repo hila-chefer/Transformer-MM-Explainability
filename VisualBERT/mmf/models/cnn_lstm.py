@@ -3,9 +3,9 @@
 from copy import deepcopy
 
 import torch
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.modules.layers import ClassifierLayer, ConvNet, Flatten
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.modules.layers import ClassifierLayer, ConvNet, Flatten
 from torch import nn
 
 

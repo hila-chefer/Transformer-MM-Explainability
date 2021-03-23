@@ -20,9 +20,9 @@ from pathlib import Path
 
 import requests
 import tqdm
-from mmf.utils.distributed import is_master, synchronize
-from mmf.utils.file_io import PathManager
-from mmf.utils.general import get_absolute_path
+from VisualBERT.mmf.utils.distributed import is_master, synchronize
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.general import get_absolute_path
 
 
 class DownloadableFile:
@@ -334,7 +334,7 @@ def download_pretrained_model(model_name, *args, **kwargs):
     import omegaconf
     from omegaconf import OmegaConf
 
-    from mmf.utils.configuration import get_mmf_env, load_yaml
+    from VisualBERT.mmf.utils.configuration import get_mmf_env, load_yaml
 
     model_zoo = load_yaml(get_mmf_env(key="model_zoo"))
     OmegaConf.set_struct(model_zoo, True)

@@ -5,9 +5,9 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.vqa2.builder import VQA2Builder
-from mmf.datasets.builders.vqa2.masked_dataset import MaskedVQA2Dataset
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.vqa2.builder import VQA2Builder
+from VisualBERT.mmf.datasets.builders.vqa2.masked_dataset import MaskedVQA2Dataset
 
 
 @registry.register_builder("masked_vqa2")

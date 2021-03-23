@@ -7,10 +7,10 @@ from abc import ABC
 from typing import Any, Dict
 
 import torch
-from mmf.common.registry import registry
-from mmf.common.report import Report
-from mmf.common.sample import to_device
-from mmf.utils.general import clip_gradients
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.report import Report
+from VisualBERT.mmf.common.sample import to_device
+from VisualBERT.mmf.utils.general import clip_gradients
 from torch import Tensor
 
 

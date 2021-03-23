@@ -3,7 +3,7 @@
 from abc import ABC
 from typing import List
 
-from mmf.trainers.callbacks.base import Callback
+from VisualBERT.mmf.trainers.callbacks.base import Callback
 
 
 class TrainerCallbackHookMixin(ABC):

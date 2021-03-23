@@ -7,8 +7,8 @@ import os
 from bisect import bisect
 
 import torch
-from mmf.utils.distributed import get_rank, get_world_size
-from mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.distributed import get_rank, get_world_size
+from VisualBERT.mmf.utils.file_io import PathManager
 from torch import nn
 
 
@@ -71,7 +71,7 @@ def foldername_from_config_override(args):
 
 
 def get_mmf_root():
-    from mmf.common.registry import registry
+    from VisualBERT.mmf.common.registry import registry
 
     mmf_root = registry.get("mmf_root", no_warning=True)
     if mmf_root is None:
@@ -93,7 +93,7 @@ def get_absolute_path(paths):
             paths
         ]
         # Now, try relative to user_dir if it exists
-        from mmf.utils.configuration import get_mmf_env
+        from VisualBERT.mmf.utils.configuration import get_mmf_env
 
         user_dir = get_mmf_env(key="user_dir")
         if user_dir:
@@ -248,7 +248,7 @@ def get_current_tensors():
 
 
 def get_batch_size():
-    from mmf.utils.configuration import get_global_config
+    from VisualBERT.mmf.utils.configuration import get_global_config
 
     batch_size = get_global_config("training.batch_size")
 

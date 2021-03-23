@@ -4,10 +4,10 @@ import unittest
 
 import mmf.modules.metrics as metrics
 import torch
-from mmf.common.registry import registry
-from mmf.common.sample import Sample
-from mmf.datasets.processors import CaptionProcessor
-from mmf.utils.configuration import load_yaml
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.processors import CaptionProcessor
+from VisualBERT.mmf.utils.configuration import load_yaml
 
 
 class TestModuleMetrics(unittest.TestCase):

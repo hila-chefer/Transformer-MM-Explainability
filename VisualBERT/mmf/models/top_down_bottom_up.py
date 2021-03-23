@@ -1,8 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import torch
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.modules.layers import ReLUWithWeightNormFC
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.modules.layers import ReLUWithWeightNormFC
 
 
 # Note: Doesn't work currently. Needs to be migrated to new API

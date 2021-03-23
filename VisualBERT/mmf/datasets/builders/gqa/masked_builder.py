@@ -1,8 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.gqa.builder import GQABuilder
-from mmf.datasets.builders.gqa.masked_dataset import MaskedGQADataset
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.gqa.builder import GQABuilder
+from VisualBERT.mmf.datasets.builders.gqa.masked_dataset import MaskedGQADataset
 
 
 @registry.register_builder("masked_gqa")

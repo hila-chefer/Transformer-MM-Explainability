@@ -6,11 +6,11 @@ from copy import deepcopy
 
 import mmf.utils.download as download
 import torch
-from mmf.datasets.base_dataset_builder import BaseDatasetBuilder
-from mmf.datasets.concat_dataset import MMFConcatDataset
-from mmf.datasets.subset_dataset import MMFSubset
-from mmf.utils.configuration import get_global_config, get_mmf_env, get_zoo_config
-from mmf.utils.general import get_absolute_path
+from VisualBERT.mmf.datasets.base_dataset_builder import BaseDatasetBuilder
+from VisualBERT.mmf.datasets.concat_dataset import MMFConcatDataset
+from VisualBERT.mmf.datasets.subset_dataset import MMFSubset
+from VisualBERT.mmf.utils.configuration import get_global_config, get_mmf_env, get_zoo_config
+from VisualBERT.mmf.utils.general import get_absolute_path
 from omegaconf import open_dict
 
 

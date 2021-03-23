@@ -5,10 +5,10 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.coco.dataset import COCODataset
-from mmf.datasets.builders.textcaps.dataset import TextCapsDataset
-from mmf.datasets.builders.vqa2 import VQA2Builder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.coco.dataset import COCODataset
+from VisualBERT.mmf.datasets.builders.textcaps.dataset import TextCapsDataset
+from VisualBERT.mmf.datasets.builders.vqa2 import VQA2Builder
 
 
 @registry.register_builder("coco")

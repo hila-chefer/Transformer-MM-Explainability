@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import torch
-from mmf.common.sample import Sample
-from mmf.datasets.builders.vqa2 import VQA2Dataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.builders.vqa2 import VQA2Dataset
 
 
 class VizWizDataset(VQA2Dataset):

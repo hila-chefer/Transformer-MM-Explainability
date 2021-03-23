@@ -4,7 +4,7 @@ import glob
 import json
 import os
 
-from mmf.utils.text import tokenize
+from VisualBERT.mmf.utils.text import tokenize
 
 
 class IMDBBuilder:

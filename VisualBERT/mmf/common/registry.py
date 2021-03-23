@@ -7,7 +7,7 @@ register different kind of classes.
 
 Import the global registry object using
 
-``from mmf.common.registry import registry``
+``from VisualBERT.mmf.common.registry import registry``
 
 Various decorators for registry different kind of classes with unique keys
 
@@ -24,7 +24,7 @@ Various decorators for registry different kind of classes with unique keys
 - Register a decoder: ``@registry.register_decoder``
 - Register a transformer backend: ``@registry.register_transformer_backend``
 """
-from mmf.utils.env import setup_imports
+from VisualBERT.mmf.utils.env import setup_imports
 
 
 class Registry:
@@ -63,8 +63,8 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
-            from mmf.trainers.custom_trainer import CustomTrainer
+            from VisualBERT.mmf.common.registry import registry
+            from VisualBERT.mmf.trainers.custom_trainer import CustomTrainer
 
 
             @registry.register_trainer("custom_trainer")
@@ -88,8 +88,8 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
-            from mmf.datasets.base_dataset_builder import BaseDatasetBuilder
+            from VisualBERT.mmf.common.registry import registry
+            from VisualBERT.mmf.datasets.base_dataset_builder import BaseDatasetBuilder
 
 
             @registry.register_builder("vqa2")
@@ -99,7 +99,7 @@ class Registry:
         """
 
         def wrap(builder_cls):
-            from mmf.datasets.base_dataset_builder import BaseDatasetBuilder
+            from VisualBERT.mmf.datasets.base_dataset_builder import BaseDatasetBuilder
 
             assert issubclass(
                 builder_cls, BaseDatasetBuilder
@@ -118,8 +118,8 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
-            from mmf.modules.metrics import BaseMetric
+            from VisualBERT.mmf.common.registry import registry
+            from VisualBERT.mmf.modules.metrics import BaseMetric
 
 
             @registry.register_metric("r@1")
@@ -129,7 +129,7 @@ class Registry:
         """
 
         def wrap(func):
-            from mmf.modules.metrics import BaseMetric
+            from VisualBERT.mmf.modules.metrics import BaseMetric
 
             assert issubclass(
                 func, BaseMetric
@@ -148,7 +148,7 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
+            from VisualBERT.mmf.common.registry import registry
             from torch import nn
 
             @registry.register_task("logit_bce")
@@ -177,7 +177,7 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
+            from VisualBERT.mmf.common.registry import registry
             from torch import nn
 
             @registry.register_fusion("linear_sum")
@@ -205,8 +205,8 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
-            from mmf.models.base_model import BaseModel
+            from VisualBERT.mmf.common.registry import registry
+            from VisualBERT.mmf.models.base_model import BaseModel
 
             @registry.register_task("pythia")
             class Pythia(BaseModel):
@@ -214,7 +214,7 @@ class Registry:
         """
 
         def wrap(func):
-            from mmf.models.base_model import BaseModel
+            from VisualBERT.mmf.models.base_model import BaseModel
 
             assert issubclass(
                 func, BaseModel
@@ -233,8 +233,8 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
-            from mmf.datasets.processors import BaseProcessor
+            from VisualBERT.mmf.common.registry import registry
+            from VisualBERT.mmf.datasets.processors import BaseProcessor
 
             @registry.register_task("glove")
             class GloVe(BaseProcessor):
@@ -243,7 +243,7 @@ class Registry:
         """
 
         def wrap(func):
-            from mmf.datasets.processors.processors import BaseProcessor
+            from VisualBERT.mmf.datasets.processors.processors import BaseProcessor
 
             assert issubclass(
                 func, BaseProcessor
@@ -286,8 +286,8 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
-            from mmf.utils.text import TextDecoder
+            from VisualBERT.mmf.common.registry import registry
+            from VisualBERT.mmf.utils.text import TextDecoder
 
 
             @registry.register_decoder("nucleus_sampling")
@@ -297,7 +297,7 @@ class Registry:
         """
 
         def wrap(decoder_cls):
-            from mmf.utils.text import TextDecoder
+            from VisualBERT.mmf.utils.text import TextDecoder
 
             assert issubclass(
                 decoder_cls, TextDecoder
@@ -316,8 +316,8 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
-            from mmf.modules.encoders import Encoder
+            from VisualBERT.mmf.common.registry import registry
+            from VisualBERT.mmf.modules.encoders import Encoder
 
 
             @registry.register_encoder("transformer")
@@ -327,7 +327,7 @@ class Registry:
         """
 
         def wrap(encoder_cls):
-            from mmf.modules.encoders import Encoder
+            from VisualBERT.mmf.modules.encoders import Encoder
 
             assert issubclass(
                 encoder_cls, Encoder
@@ -346,7 +346,7 @@ class Registry:
 
         Usage::
 
-            from mmf.common.registry import registry
+            from VisualBERT.mmf.common.registry import registry
 
             registry.register("config", {})
         """
@@ -417,7 +417,7 @@ class Registry:
                                internal operations. Default: False
         Usage::
 
-            from mmf.common.registry import registry
+            from VisualBERT.mmf.common.registry import registry
 
             config = registry.get("config")
         """
@@ -448,7 +448,7 @@ class Registry:
             name: Key which needs to be removed.
         Usage::
 
-            from mmf.common.registry import registry
+            from VisualBERT.mmf.common.registry import registry
 
             config = registry.unregister("config")
         """

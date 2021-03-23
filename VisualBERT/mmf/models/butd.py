@@ -1,9 +1,9 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
 import torch
-from mmf.common.registry import registry
-from mmf.models.pythia import Pythia
-from mmf.modules.layers import ClassifierLayer
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.pythia import Pythia
+from VisualBERT.mmf.modules.layers import ClassifierLayer
 
 
 @registry.register_model("butd")

@@ -21,8 +21,8 @@ Example::
 
     import torch
 
-    from mmf.common.registry import registry
-    from mmf.models.base_model import BaseModel
+    from VisualBERT.mmf.common.registry import registry
+    from VisualBERT.mmf.models.base_model import BaseModel
 
 
     @registry.register("pythia")
@@ -47,11 +47,11 @@ from copy import deepcopy
 from dataclasses import dataclass
 from typing import Union
 
-from mmf.common.registry import registry
-from mmf.common.sample import to_device
-from mmf.modules.losses import Losses
-from mmf.utils.checkpoint import load_pretrained_model
-from mmf.utils.download import download_pretrained_model
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.sample import to_device
+from VisualBERT.mmf.modules.losses import Losses
+from VisualBERT.mmf.utils.checkpoint import load_pretrained_model
+from VisualBERT.mmf.utils.download import download_pretrained_model
 from omegaconf import MISSING, DictConfig, OmegaConf
 from torch import nn
 

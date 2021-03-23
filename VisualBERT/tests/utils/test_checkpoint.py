@@ -9,14 +9,14 @@ from io import StringIO
 from unittest.mock import Mock, patch
 
 import torch
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.trainers.callbacks.checkpoint import CheckpointCallback
-from mmf.trainers.callbacks.early_stopping import EarlyStoppingCallback
-from mmf.trainers.callbacks.lr_scheduler import LRSchedulerCallback
-from mmf.utils.checkpoint import Checkpoint
-from mmf.utils.configuration import load_yaml
-from mmf.utils.file_io import PathManager
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.trainers.callbacks.checkpoint import CheckpointCallback
+from VisualBERT.mmf.trainers.callbacks.early_stopping import EarlyStoppingCallback
+from VisualBERT.mmf.trainers.callbacks.lr_scheduler import LRSchedulerCallback
+from VisualBERT.mmf.utils.checkpoint import Checkpoint
+from VisualBERT.mmf.utils.configuration import load_yaml
+from VisualBERT.mmf.utils.file_io import PathManager
 from omegaconf import OmegaConf
 from tests.test_utils import compare_state_dicts, skip_if_no_cuda
 

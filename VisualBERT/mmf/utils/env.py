@@ -10,7 +10,7 @@ from datetime import datetime
 
 import numpy as np
 import torch
-from mmf.utils.general import get_absolute_path
+from VisualBERT.mmf.utils.general import get_absolute_path
 
 
 def set_seed(seed):
@@ -73,7 +73,7 @@ def import_files(file_path: str, module_name: str = None):
     Contents of __init__.py
 
     ```
-    from mmf.utils.env import import_files
+    from VisualBERT.mmf.utils.env import import_files
 
     import_files(__file__, "my_project.my_models")
     ```
@@ -94,7 +94,7 @@ def import_files(file_path: str, module_name: str = None):
 
 
 def setup_imports():
-    from mmf.common.registry import registry
+    from VisualBERT.mmf.common.registry import registry
 
     # First, check if imports are already setup
     has_already_setup = registry.get("imports_setup", no_warning=True)
@@ -141,7 +141,7 @@ def setup_imports():
                     import_prefix_index = idx + 1
             file_name = splits[-1]
             module_name = file_name[: file_name.find(".py")]
-            module = ".".join(["mmf"] + splits[import_prefix_index:-1] + [module_name])
+            module = ".".join(["VisualBERT","mmf"] + splits[import_prefix_index:-1] + [module_name])
             importlib.import_module(module)
 
     registry.register("imports_setup", True)

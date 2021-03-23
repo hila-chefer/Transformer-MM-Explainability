@@ -3,11 +3,11 @@ import logging
 import time
 
 import torch
-from mmf.trainers.callbacks.base import Callback
-from mmf.utils.configuration import get_mmf_env
-from mmf.utils.distributed import is_master
-from mmf.utils.logger import TensorboardLogger, log_progress, setup_output_folder
-from mmf.utils.timer import Timer
+from VisualBERT.mmf.trainers.callbacks.base import Callback
+from VisualBERT.mmf.utils.configuration import get_mmf_env
+from VisualBERT.mmf.utils.distributed import is_master
+from VisualBERT.mmf.utils.logger import TensorboardLogger, log_progress, setup_output_folder
+from VisualBERT.mmf.utils.timer import Timer
 
 
 logger = logging.getLogger(__name__)

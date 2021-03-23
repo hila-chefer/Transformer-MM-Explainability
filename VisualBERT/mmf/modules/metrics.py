@@ -21,8 +21,8 @@ Example::
 
     import torch
 
-    from mmf.common.registry import registry
-    from mmf.modules.metrics import BaseMetric
+    from VisualBERT.mmf.common.registry import registry
+    from VisualBERT.mmf.modules.metrics import BaseMetric
 
     @registry.register_metric("some")
     class SomeMetric(BaseMetric):
@@ -47,8 +47,8 @@ Example config for above metric::
 import collections
 
 import torch
-from mmf.common.registry import registry
-from mmf.datasets.processors.processors import EvalAIAnswerProcessor
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.processors.processors import EvalAIAnswerProcessor
 from sklearn.metrics import (
     average_precision_score,
     f1_score,
@@ -631,8 +631,8 @@ class TextVQAAccuracy(BaseMetric):
         answer_space_size = answer_processor.get_true_vocab_size()
 
         predictions = []
-        from mmf.utils.distributed import byte_tensor_to_object
-        from mmf.utils.text import word_tokenize
+        from VisualBERT.mmf.utils.distributed import byte_tensor_to_object
+        from VisualBERT.mmf.utils.text import word_tokenize
 
         for idx in range(batch_size):
             tokens = byte_tensor_to_object(context_tokens[idx])

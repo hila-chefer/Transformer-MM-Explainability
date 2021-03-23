@@ -1,5 +1,5 @@
-from mmf.common.registry import registry
-from mmf.datasets.builders.coco.builder import COCOBuilder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.coco.builder import COCOBuilder
 
 from .masked_dataset import MaskedCOCODataset
 

@@ -4,9 +4,9 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Any, Dict, List, NamedTuple, Tuple, Type
 
-from mmf.common.registry import registry
-from mmf.models import BaseModel
-from mmf.utils.modeling import get_optimizer_parameters_for_bert
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models import BaseModel
+from VisualBERT.mmf.utils.modeling import get_optimizer_parameters_for_bert
 from torch import Tensor, nn
 
 

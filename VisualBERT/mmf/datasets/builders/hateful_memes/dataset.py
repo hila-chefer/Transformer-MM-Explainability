@@ -5,10 +5,10 @@ import os
 import numpy as np
 import omegaconf
 import torch
-from mmf.common.sample import Sample
-from mmf.datasets.mmf_dataset import MMFDataset
-from mmf.utils.general import get_mmf_root
-from mmf.utils.visualize import visualize_images
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.mmf_dataset import MMFDataset
+from VisualBERT.mmf.utils.general import get_mmf_root
+from VisualBERT.mmf.utils.visualize import visualize_images
 from PIL import Image
 from torchvision import transforms
 

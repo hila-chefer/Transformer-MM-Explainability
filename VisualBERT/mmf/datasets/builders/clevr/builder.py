@@ -5,12 +5,12 @@ import os
 import zipfile
 from collections import Counter
 
-from mmf.common.constants import CLEVR_DOWNLOAD_URL
-from mmf.common.registry import registry
-from mmf.datasets.base_dataset_builder import BaseDatasetBuilder
-from mmf.datasets.builders.clevr.dataset import CLEVRDataset
-from mmf.utils.download import download
-from mmf.utils.general import get_mmf_root
+from VisualBERT.mmf.common.constants import CLEVR_DOWNLOAD_URL
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.base_dataset_builder import BaseDatasetBuilder
+from VisualBERT.mmf.datasets.builders.clevr.dataset import CLEVRDataset
+from VisualBERT.mmf.utils.download import download
+from VisualBERT.mmf.utils.general import get_mmf_root
 
 
 logger = logging.getLogger(__name__)

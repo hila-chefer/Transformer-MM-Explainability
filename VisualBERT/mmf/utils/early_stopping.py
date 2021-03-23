@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import numpy as np
 import torch
-from mmf.utils.distributed import is_master
+from VisualBERT.mmf.utils.distributed import is_master
 
 
 class EarlyStopping:

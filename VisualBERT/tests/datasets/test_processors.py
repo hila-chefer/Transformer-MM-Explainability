@@ -4,14 +4,14 @@ import tempfile
 import unittest
 
 import torch
-from mmf.datasets.processors.processors import (
+from VisualBERT.mmf.datasets.processors.processors import (
     CaptionProcessor,
     EvalAIAnswerProcessor,
     MultiClassFromFile,
     MultiHotAnswerFromVocabProcessor,
     TransformerBboxProcessor,
 )
-from mmf.utils.configuration import load_yaml
+from VisualBERT.mmf.utils.configuration import load_yaml
 from omegaconf import OmegaConf
 
 from ..test_utils import compare_tensors

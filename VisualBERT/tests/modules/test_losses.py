@@ -5,8 +5,8 @@ from unittest.mock import MagicMock
 
 import mmf.modules.losses as losses
 import torch
-from mmf.common.registry import registry
-from mmf.common.sample import SampleList
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.sample import SampleList
 
 
 RETURN_VALUE = torch.tensor(1.0)

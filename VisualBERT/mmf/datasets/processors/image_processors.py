@@ -3,8 +3,8 @@
 import collections
 
 import torch
-from mmf.common.registry import registry
-from mmf.datasets.processors.processors import BaseProcessor
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.processors.processors import BaseProcessor
 from omegaconf import OmegaConf
 from torchvision import transforms
 

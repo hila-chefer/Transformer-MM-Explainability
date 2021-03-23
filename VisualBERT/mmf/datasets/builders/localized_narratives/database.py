@@ -2,7 +2,7 @@
 import json
 from typing import List, NamedTuple
 
-from mmf.datasets.databases.annotation_database import AnnotationDatabase
+from VisualBERT.mmf.datasets.databases.annotation_database import AnnotationDatabase
 
 
 class TimedPoint(NamedTuple):

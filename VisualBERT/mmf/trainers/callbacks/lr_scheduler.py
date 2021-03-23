@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.trainers.callbacks.base import Callback
-from mmf.utils.build import build_scheduler
+from VisualBERT.mmf.trainers.callbacks.base import Callback
+from VisualBERT.mmf.utils.build import build_scheduler
 
 
 class LRSchedulerCallback(Callback):

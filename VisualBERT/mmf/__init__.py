@@ -2,9 +2,9 @@
 # isort:skip_file
 # flake8: noqa: F401
 
-from mmf import utils, common, modules, datasets, models
-from mmf.modules import losses, schedulers, optimizers, metrics
-from mmf.version import __version__
+from VisualBERT.mmf import utils, common, modules, datasets, models
+from VisualBERT.mmf.modules import losses, schedulers, optimizers, metrics
+from VisualBERT.mmf.version import __version__
 
 
 __all__ = [

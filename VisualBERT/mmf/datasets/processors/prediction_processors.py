@@ -3,9 +3,9 @@
 from dataclasses import dataclass
 from typing import Any, Dict, List, Type
 
-from mmf.common.registry import registry
-from mmf.common.report import Report
-from mmf.datasets.processors.processors import BatchProcessor, BatchProcessorConfigType
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.report import Report
+from VisualBERT.mmf.datasets.processors.processors import BatchProcessor, BatchProcessorConfigType
 
 
 @dataclass

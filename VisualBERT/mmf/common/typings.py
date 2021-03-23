@@ -4,9 +4,9 @@ from typing import Any, Dict, List, Optional, Tuple, Type
 
 import omegaconf
 import torch
-from mmf.datasets.base_dataset import BaseDataset
-from mmf.datasets.base_dataset_builder import BaseDatasetBuilder
-from mmf.utils.download import DownloadableFile
+from VisualBERT.mmf.datasets.base_dataset import BaseDataset
+from VisualBERT.mmf.datasets.base_dataset_builder import BaseDatasetBuilder
+from VisualBERT.mmf.utils.download import DownloadableFile
 
 
 DownloadableFileType = Type[DownloadableFile]

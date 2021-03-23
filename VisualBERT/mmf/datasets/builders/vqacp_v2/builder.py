@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.common.registry import registry
-from mmf.datasets.builders.vqacp_v2.dataset import VQACPv2Dataset
-from mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.vqacp_v2.dataset import VQACPv2Dataset
+from VisualBERT.mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
 
 
 @registry.register_builder("vqacp_v2")

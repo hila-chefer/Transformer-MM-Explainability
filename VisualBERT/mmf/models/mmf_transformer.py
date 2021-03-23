@@ -3,13 +3,13 @@
 from typing import Dict, List
 
 import torch
-from mmf.common.registry import registry
-from mmf.models.transformers.base import (
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.transformers.base import (
     BaseTransformer,
     BaseTransformerConfigType,
     BaseTransformerInput,
 )
-from mmf.utils.build import build_encoder
+from VisualBERT.mmf.utils.build import build_encoder
 from omegaconf import OmegaConf
 from torch import Tensor, nn
 from transformers.modeling_bert import BertPooler, BertPredictionHeadTransform

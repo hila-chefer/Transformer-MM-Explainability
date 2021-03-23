@@ -2,8 +2,8 @@ import copy
 import json
 
 import torch
-from mmf.common.sample import Sample
-from mmf.datasets.builders.vqa2 import VQA2Dataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.builders.vqa2 import VQA2Dataset
 
 
 class NLVR2Dataset(VQA2Dataset):

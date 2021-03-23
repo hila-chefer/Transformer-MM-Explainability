@@ -4,12 +4,12 @@ from copy import deepcopy
 from typing import Any, Dict, List, Type
 
 import torch
-from mmf.common.registry import registry
-from mmf.models.transformers.base import (
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.transformers.base import (
     BaseTransformerBackend,
     BaseTransformerConfigType,
 )
-from mmf.modules.hf_layers import replace_with_jit
+from VisualBERT.mmf.modules.hf_layers import replace_with_jit
 from omegaconf import OmegaConf
 from torch import Tensor, nn
 from transformers import AutoConfig, AutoModel

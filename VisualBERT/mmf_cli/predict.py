@@ -3,7 +3,7 @@
 
 import sys
 
-from mmf_cli.run import run
+from VisualBERT.mmf_cli.run import run
 
 
 def predict(opts=None):

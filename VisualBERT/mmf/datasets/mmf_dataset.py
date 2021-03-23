@@ -2,10 +2,10 @@
 import collections
 import os
 
-from mmf.datasets.base_dataset import BaseDataset
-from mmf.datasets.databases.annotation_database import AnnotationDatabase
-from mmf.datasets.databases.features_database import FeaturesDatabase
-from mmf.datasets.databases.image_database import ImageDatabase
+from VisualBERT.mmf.datasets.base_dataset import BaseDataset
+from VisualBERT.mmf.datasets.databases.annotation_database import AnnotationDatabase
+from VisualBERT.mmf.datasets.databases.features_database import FeaturesDatabase
+from VisualBERT.mmf.datasets.databases.image_database import ImageDatabase
 
 
 class MMFDataset(BaseDataset):

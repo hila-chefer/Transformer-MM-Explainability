@@ -61,7 +61,7 @@ def build_trainer(config: mmf_typings.DictConfig) -> Any:
 def build_model(
     config: Union[DictConfig, "mmf.models.base_model.BaseModel.Config"]
 ) -> "mmf.models.base_model.BaseModel":
-    from mmf.models.base_model import BaseModel
+    from VisualBERT.mmf.models.base_model import BaseModel
 
     # If it is not an OmegaConf object, create the object
     if not isinstance(config, DictConfig) and isinstance(config, BaseModel.Config):
@@ -101,7 +101,7 @@ def build_dataset(
     Returns:
         (DatasetType): A dataset instance of type BaseDataset
     """
-    from mmf.utils.configuration import load_yaml_with_defaults
+    from VisualBERT.mmf.utils.configuration import load_yaml_with_defaults
 
     dataset_builder = registry.get_builder_class(dataset_key)
     assert dataset_builder, (
@@ -137,7 +137,7 @@ def build_dataloader_and_sampler(
     Returns:
         mmf_typings.DataLoaderAndSampler: Tuple of Dataloader and Sampler instance
     """
-    from mmf.common.batch_collator import BatchCollator
+    from VisualBERT.mmf.common.batch_collator import BatchCollator
 
     num_workers = training_config.num_workers
     pin_memory = training_config.pin_memory
@@ -176,7 +176,7 @@ def _add_extra_args_for_dataloader(
     dataset_instance: mmf_typings.DatasetType,
     other_args: mmf_typings.DataLoaderArgsType = None,
 ) -> mmf_typings.DataLoaderArgsType:
-    from mmf.utils.general import get_batch_size
+    from VisualBERT.mmf.utils.general import get_batch_size
 
     if other_args is None:
         other_args = {}
@@ -267,7 +267,7 @@ def build_scheduler(optimizer, config):
 
 
 def build_classifier_layer(config, *args, **kwargs):
-    from mmf.modules.layers import ClassifierLayer
+    from VisualBERT.mmf.modules.layers import ClassifierLayer
 
     classifier = ClassifierLayer(config.type, *args, **config.params, **kwargs)
     return classifier.module
@@ -275,16 +275,16 @@ def build_classifier_layer(config, *args, **kwargs):
 
 def build_text_encoder(config, *args, **kwargs):
     try:
-        from mmf.modules.fb.encoders import TextEncoderFactory
+        from VisualBERT.mmf.modules.fb.encoders import TextEncoderFactory
     except ImportError:
-        from mmf.modules.encoders import TextEncoderFactory
+        from VisualBERT.mmf.modules.encoders import TextEncoderFactory
 
     text_encoder = TextEncoderFactory(config, *args, **kwargs)
     return text_encoder.module
 
 
 def build_image_encoder(config, direct_features=False, **kwargs):
-    from mmf.modules.encoders import ImageEncoderFactory, ImageFeatureEncoderFactory
+    from VisualBERT.mmf.modules.encoders import ImageEncoderFactory, ImageFeatureEncoderFactory
 
     if direct_features:
         module = ImageFeatureEncoderFactory(config)
@@ -294,7 +294,7 @@ def build_image_encoder(config, direct_features=False, **kwargs):
 
 
 def build_encoder(config: Union[DictConfig, "mmf.modules.encoders.Encoder.Config"]):
-    from mmf.modules.encoders import Encoder
+    from VisualBERT.mmf.modules.encoders import Encoder
 
     # If it is not an OmegaConf object, create the object
     if not isinstance(config, DictConfig) and isinstance(config, Encoder.Config):
@@ -335,7 +335,7 @@ def build_processors(
         ProcessorDict: Dictionary containing key to
             processor mapping
     """
-    from mmf.datasets.processors.processors import Processor
+    from VisualBERT.mmf.datasets.processors.processors import Processor
 
     processor_dict = {}
 

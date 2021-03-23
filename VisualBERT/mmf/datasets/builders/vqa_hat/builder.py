@@ -4,9 +4,9 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 #
-from mmf.common.registry import registry
-from mmf.datasets.builders.vqa_hat.dataset import VQAHATDataset
-from mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.vqa_hat.dataset import VQAHATDataset
+from VisualBERT.mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
 
 
 @registry.register_builder("vqa_hat")

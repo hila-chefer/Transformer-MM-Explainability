@@ -8,16 +8,16 @@ from copy import deepcopy
 from typing import Dict, List, Optional, Tuple
 
 import torch
-from mmf.common.registry import registry
-from mmf.models import BaseModel
-from mmf.modules.embeddings import BertVisioLinguisticEmbeddings
-from mmf.modules.hf_layers import BertEncoderJit, BertLayerJit
-from mmf.models.transformers.backends.BERT_ours import BertEncoder, BertPredictionHeadTransform
-from mmf.models.transformers.backends.layers_ours import *
-from mmf.utils.configuration import get_mmf_cache_dir
-from mmf.utils.modeling import get_optimizer_parameters_for_bert
-from mmf.utils.torchscript import getattr_torchscriptable
-from mmf.utils.transform import (
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models import BaseModel
+from VisualBERT.mmf.modules.embeddings import BertVisioLinguisticEmbeddings
+from VisualBERT.mmf.modules.hf_layers import BertEncoderJit, BertLayerJit
+from VisualBERT.mmf.models.transformers.backends.BERT_ours import BertEncoder, BertPredictionHeadTransform
+from VisualBERT.mmf.models.transformers.backends.layers_ours import *
+from VisualBERT.mmf.utils.configuration import get_mmf_cache_dir
+from VisualBERT.mmf.utils.modeling import get_optimizer_parameters_for_bert
+from VisualBERT.mmf.utils.torchscript import getattr_torchscriptable
+from VisualBERT.mmf.utils.transform import (
     transform_to_batch_sequence,
     transform_to_batch_sequence_dim,
 )

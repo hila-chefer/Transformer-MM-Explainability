@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.coco import COCOBuilder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.coco import COCOBuilder
 
 from .dataset import ConceptualCaptionsDataset
 

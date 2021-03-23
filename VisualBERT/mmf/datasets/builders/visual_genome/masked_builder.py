@@ -1,8 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.visual_genome.builder import VisualGenomeBuilder
-from mmf.datasets.builders.visual_genome.masked_dataset import MaskedVisualGenomeDataset
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.visual_genome.builder import VisualGenomeBuilder
+from VisualBERT.mmf.datasets.builders.visual_genome.masked_dataset import MaskedVisualGenomeDataset
 
 
 @registry.register_builder("masked_visual_genome")

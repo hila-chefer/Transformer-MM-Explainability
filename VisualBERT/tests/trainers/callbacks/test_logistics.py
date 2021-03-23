@@ -8,13 +8,13 @@ from copy import deepcopy
 from unittest.mock import Mock
 
 import torch
-from mmf.common.meter import Meter
-from mmf.common.registry import registry
-from mmf.common.report import Report
-from mmf.models.base_model import BaseModel
-from mmf.trainers.callbacks.logistics import LogisticsCallback
-from mmf.utils.file_io import PathManager
-from mmf.utils.logger import setup_logger
+from VisualBERT.mmf.common.meter import Meter
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.report import Report
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.trainers.callbacks.logistics import LogisticsCallback
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.logger import setup_logger
 from omegaconf import OmegaConf
 
 

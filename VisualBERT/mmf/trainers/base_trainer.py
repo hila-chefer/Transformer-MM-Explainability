@@ -2,8 +2,8 @@
 
 from abc import ABC, abstractmethod
 
-from mmf.common import typings as mmf_typings
-from mmf.common.registry import registry
+from VisualBERT.mmf.common import typings as mmf_typings
+from VisualBERT.mmf.common.registry import registry
 
 
 @registry.register_trainer("base")

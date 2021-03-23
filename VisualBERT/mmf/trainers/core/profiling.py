@@ -4,7 +4,7 @@ import logging
 from abc import ABC
 from typing import Type
 
-from mmf.utils.timer import Timer
+from VisualBERT.mmf.utils.timer import Timer
 
 
 logger = logging.getLogger(__name__)

@@ -1,6 +1,6 @@
 import random
 
-from mmf.datasets.builders.vqa2.dataset import VQA2Dataset
+from VisualBERT.mmf.datasets.builders.vqa2.dataset import VQA2Dataset
 
 
 class MaskedQVQA2Dataset(VQA2Dataset):

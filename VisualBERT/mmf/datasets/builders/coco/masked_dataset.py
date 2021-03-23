@@ -1,7 +1,7 @@
 import random
 
-from mmf.common.sample import Sample
-from mmf.datasets.builders.coco import COCODataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.builders.coco import COCODataset
 
 
 class MaskedCOCODataset(COCODataset):

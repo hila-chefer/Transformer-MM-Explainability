@@ -2,8 +2,8 @@
 import copy
 import json
 
-from mmf.datasets.databases.annotation_database import AnnotationDatabase
-from mmf.utils.general import get_absolute_path
+from VisualBERT.mmf.datasets.databases.annotation_database import AnnotationDatabase
+from VisualBERT.mmf.utils.general import get_absolute_path
 
 
 class OKVQAAnnotationDatabase(AnnotationDatabase):

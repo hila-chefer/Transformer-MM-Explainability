@@ -1,8 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
 import torch
-from mmf.common.sample import Sample
-from mmf.datasets.mmf_dataset import MMFDataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.mmf_dataset import MMFDataset
 
 
 class GQADataset(MMFDataset):

@@ -3,7 +3,7 @@
 import os
 import unittest
 
-from mmf.utils.general import get_mmf_root
+from VisualBERT.mmf.utils.general import get_mmf_root
 
 
 def has_python_file(files):

@@ -4,7 +4,7 @@ from collections import Counter
 
 import numpy as np
 import torch
-from mmf.datasets.multi_dataset_loader import MultiDatasetLoader
+from VisualBERT.mmf.datasets.multi_dataset_loader import MultiDatasetLoader
 from torch.utils.data import DataLoader
 
 from ..test_utils import NumbersDataset

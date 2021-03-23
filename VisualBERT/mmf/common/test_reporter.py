@@ -4,18 +4,18 @@ import json
 import logging
 import os
 
-from mmf.common.batch_collator import BatchCollator
-from mmf.common.registry import registry
-from mmf.utils.build import build_dataloader_and_sampler
-from mmf.utils.configuration import get_mmf_env
-from mmf.utils.distributed import gather_tensor, is_dist_initialized, is_master
-from mmf.utils.file_io import PathManager
-from mmf.utils.general import (
+from VisualBERT.mmf.common.batch_collator import BatchCollator
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.utils.build import build_dataloader_and_sampler
+from VisualBERT.mmf.utils.configuration import get_mmf_env
+from VisualBERT.mmf.utils.distributed import gather_tensor, is_dist_initialized, is_master
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.general import (
     ckpt_name_from_core_args,
     foldername_from_config_override,
     get_batch_size,
 )
-from mmf.utils.timer import Timer
+from VisualBERT.mmf.utils.timer import Timer
 from torch.utils.data import DataLoader, Dataset
 from torch.utils.data.distributed import DistributedSampler
 

@@ -8,14 +8,14 @@ from typing import Any
 
 import torch
 import torchvision
-from mmf.common.registry import registry
-from mmf.modules.embeddings import ProjectionEmbedding, TextEmbedding
-from mmf.modules.hf_layers import BertModelJit
-from mmf.modules.layers import Identity
-from mmf.utils.build import build_image_encoder, build_text_encoder
-from mmf.utils.download import download_pretrained_model
-from mmf.utils.file_io import PathManager
-from mmf.utils.general import get_absolute_path
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.modules.embeddings import ProjectionEmbedding, TextEmbedding
+from VisualBERT.mmf.modules.hf_layers import BertModelJit
+from VisualBERT.mmf.modules.layers import Identity
+from VisualBERT.mmf.utils.build import build_image_encoder, build_text_encoder
+from VisualBERT.mmf.utils.download import download_pretrained_model
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.general import get_absolute_path
 from omegaconf import MISSING, OmegaConf
 from torch import nn
 from transformers.configuration_auto import AutoConfig

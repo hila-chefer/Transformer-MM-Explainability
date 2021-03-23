@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.models.pythia import Pythia
-from mmf.modules.decoders import VisDialDiscriminator
+from VisualBERT.mmf.models.pythia import Pythia
+from VisualBERT.mmf.modules.decoders import VisDialDiscriminator
 
 
 class VisDialMultiModalModel(Pythia):

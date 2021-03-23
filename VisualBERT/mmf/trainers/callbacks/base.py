@@ -2,8 +2,8 @@
 
 from typing import Type
 
-from mmf.common import typings as mmf_typings
-from mmf.trainers.base_trainer import BaseTrainer
+from VisualBERT.mmf.common import typings as mmf_typings
+from VisualBERT.mmf.trainers.base_trainer import BaseTrainer
 
 
 class Callback:

@@ -1,8 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import logging
 
-from mmf.trainers.callbacks.base import Callback
-from mmf.utils.checkpoint import Checkpoint, consolidate_optim_state_dict
+from VisualBERT.mmf.trainers.callbacks.base import Callback
+from VisualBERT.mmf.utils.checkpoint import Checkpoint, consolidate_optim_state_dict
 
 
 logger = logging.getLogger(__name__)

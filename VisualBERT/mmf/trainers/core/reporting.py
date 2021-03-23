@@ -4,9 +4,9 @@ from abc import ABC
 from typing import Any, Dict, Type
 
 import torch
-from mmf.common.meter import Meter
-from mmf.common.registry import registry
-from mmf.utils.distributed import reduce_dict
+from VisualBERT.mmf.common.meter import Meter
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.utils.distributed import reduce_dict
 
 
 class TrainerReportingMixin(ABC):

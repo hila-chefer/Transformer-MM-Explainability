@@ -3,11 +3,11 @@ import collections
 from copy import deepcopy
 
 import torch
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.modules.encoders import MultiModalEncoderBase
-from mmf.utils.build import build_classifier_layer
-from mmf.utils.modeling import get_bert_configured_parameters
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.modules.encoders import MultiModalEncoderBase
+from VisualBERT.mmf.utils.build import build_classifier_layer
+from VisualBERT.mmf.utils.modeling import get_bert_configured_parameters
 
 
 class FusionBase(MultiModalEncoderBase):

@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.common.registry import Registry
-from mmf.datasets.builders.stvqa.dataset import STVQADataset
-from mmf.datasets.builders.textvqa.builder import TextVQABuilder
+from VisualBERT.mmf.common.registry import Registry
+from VisualBERT.mmf.datasets.builders.stvqa.dataset import STVQADataset
+from VisualBERT.mmf.datasets.builders.textvqa.builder import TextVQABuilder
 
 
 @Registry.register_builder("stvqa")

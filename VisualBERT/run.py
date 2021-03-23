@@ -4,7 +4,7 @@ import argparse
 import logging
 import random
 import typing
-
+import sys
 import torch
 from VisualBERT.mmf.common.registry import registry
 from VisualBERT.mmf.utils.build import build_config, build_trainer
@@ -14,10 +14,10 @@ from VisualBERT.mmf.utils.env import set_seed, setup_imports
 from VisualBERT.mmf.utils.flags import flags
 from VisualBERT.mmf.utils.general import log_device_names
 from VisualBERT.mmf.utils.logger import setup_logger, setup_very_basic_config
+from VisualBERT import perturbation_arguments
 
 
 setup_very_basic_config()
-
 
 def main(configuration, init_distributed=False, predict=False):
     # A reload might be needed for imports
@@ -87,6 +87,8 @@ def run(opts: typing.Optional[typing.List[str]] = None, predict: bool = False):
     else:
         args = argparse.Namespace(config_override=None)
         args.opts = opts
+
+    perturbation_arguments.args = args
 
     configuration = Configuration(args)
     # Do set runtime args which can be changed by MMF

@@ -1,5 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.datasets.builders.textvqa.dataset import TextVQADataset
+from VisualBERT.mmf.datasets.builders.textvqa.dataset import TextVQADataset
 
 
 class OCRVQADataset(TextVQADataset):

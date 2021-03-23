@@ -2,7 +2,7 @@
 import warnings
 
 import torch
-from mmf.common.sample import Sample
+from VisualBERT.mmf.common.sample import Sample
 
 
 def build_bbox_tensors(infos, max_length):
@@ -40,7 +40,7 @@ def build_bbox_tensors(infos, max_length):
 
 
 def build_dataset_from_multiple_imdbs(config, dataset_cls, dataset_type):
-    from mmf.datasets.concat_dataset import MMFConcatDataset
+    from VisualBERT.mmf.datasets.concat_dataset import MMFConcatDataset
 
     if dataset_type not in config.imdb_files:
         warnings.warn(

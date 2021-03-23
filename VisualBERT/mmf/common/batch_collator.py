@@ -1,5 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.common.sample import SampleList
+from VisualBERT.mmf.common.sample import SampleList
 
 
 class BatchCollator:

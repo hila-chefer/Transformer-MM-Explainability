@@ -7,7 +7,7 @@ import unittest
 import uuid
 from typing import Optional
 
-from mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.file_io import PathManager
 
 
 class TestFileIO(unittest.TestCase):

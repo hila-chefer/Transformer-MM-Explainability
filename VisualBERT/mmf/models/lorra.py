@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.common.registry import registry
-from mmf.models.pythia import Pythia
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.pythia import Pythia
 
 
 @registry.register_model("lorra")

@@ -2,9 +2,9 @@ import copy
 import json
 
 import torch
-from mmf.common.sample import Sample
-from mmf.datasets.builders.visual_dialog.database import VisualDialogDatabase
-from mmf.datasets.builders.vqa2 import VQA2Dataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.builders.visual_dialog.database import VisualDialogDatabase
+from VisualBERT.mmf.datasets.builders.vqa2 import VQA2Dataset
 
 
 class VisualDialogDataset(VQA2Dataset):

@@ -3,8 +3,8 @@
 from typing import Optional
 
 import torch
-from mmf.common.registry import registry
-from mmf.modules.decoders import LanguageDecoder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.modules.decoders import LanguageDecoder
 from torch import nn
 from torch.nn.utils.weight_norm import weight_norm
 
@@ -158,7 +158,7 @@ class MLPClassifer(nn.Module):
         **kwargs,
     ):
         super().__init__()
-        from mmf.utils.modeling import ACT2FN
+        from VisualBERT.mmf.utils.modeling import ACT2FN
 
         activation = ACT2FN[hidden_act]
         self.layers = nn.ModuleList()

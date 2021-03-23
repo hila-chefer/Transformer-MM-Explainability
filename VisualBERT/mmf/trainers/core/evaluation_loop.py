@@ -11,6 +11,7 @@ from VisualBERT.mmf.common.report import Report
 from VisualBERT.mmf.common.sample import to_device
 from VisualBERT.mmf.utils.distributed import is_master
 from VisualBERT.mmf.models.transformers.backends import ExplanationGenerator
+from VisualBERT import perturbation_arguments
 
 logger = logging.getLogger(__name__)
 
@@ -74,9 +75,10 @@ class TrainerEvaluationLoopMixinPert(ABC):
         self.model.eval()
         expl = ExplanationGenerator.SelfAttentionGenerator(self.model)
 
-        method = "transformer_attribution"
-        pert_type = "pos"
-        modality = "text"
+        method = perturbation_arguments.args.method
+        pert_type = "pos" if perturbation_arguments.args.is_positive_pert else "neg"
+        modality = "text" if perturbation_arguments.args.is_text_pert else "image"
+        num_samples = perturbation_arguments.args.num_samples
         method_expl = {"transformer_attribution": expl.generate_transformer_att,
                        "ours_no_lrp": expl.generate_ours,
                        "partial_lrp": expl.generate_partial_lrp,
@@ -121,7 +123,7 @@ class TrainerEvaluationLoopMixinPert(ABC):
                     step_acc[step_idx] += report["targets"][0,report["scores"].argmax()].item()
 
                 i += 1
-                if i > 10000:
+                if i > num_samples:
                     break
             else:
                 input_mask = batch['input_mask'].clone()
@@ -160,8 +162,8 @@ class TrainerEvaluationLoopMixinPert(ABC):
                     step_acc[step_idx] += report["targets"][0, report["scores"].argmax()].item()
 
                 i += 1
-                if i > 10000:
+                if i > num_samples:
                     break
         print("pert type {0}".format(pert_type))
-        step_acc = [acc / 10000 * 100 for acc in step_acc]
+        step_acc = [acc / num_samples * 100 for acc in step_acc]
         print(step_acc)

@@ -8,11 +8,11 @@ from typing import Dict, List, Optional, Tuple
 import numpy as np
 import torch
 import torch.nn.functional as F
-from mmf.common.registry import registry
-from mmf.models import BaseModel
-from mmf.modules.hf_layers import replace_with_jit
-from mmf.utils.configuration import get_mmf_cache_dir
-from mmf.utils.modeling import get_optimizer_parameters_for_bert
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models import BaseModel
+from VisualBERT.mmf.modules.hf_layers import replace_with_jit
+from VisualBERT.mmf.utils.configuration import get_mmf_cache_dir
+from VisualBERT.mmf.utils.modeling import get_optimizer_parameters_for_bert
 from omegaconf import OmegaConf
 from torch import Tensor, nn
 from torch.nn import CrossEntropyLoss

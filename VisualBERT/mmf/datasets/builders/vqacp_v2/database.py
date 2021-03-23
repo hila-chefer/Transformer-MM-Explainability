@@ -2,8 +2,8 @@
 import copy
 import json
 
-from mmf.datasets.builders.okvqa.database import OKVQAAnnotationDatabase
-from mmf.utils.file_io import PathManager
+from VisualBERT.mmf.datasets.builders.okvqa.database import OKVQAAnnotationDatabase
+from VisualBERT.mmf.utils.file_io import PathManager
 
 
 class VQACPv2AnnotationDatabase(OKVQAAnnotationDatabase):

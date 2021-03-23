@@ -2,7 +2,7 @@
 import time
 import unittest
 
-from mmf.utils.timer import Timer
+from VisualBERT.mmf.utils.timer import Timer
 
 
 class TestUtilsTimer(unittest.TestCase):

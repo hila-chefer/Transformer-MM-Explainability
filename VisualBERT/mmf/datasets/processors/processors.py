@@ -52,8 +52,8 @@ inside the processor's functions.
 
 Example::
 
-    from mmf.common.registry import registry
-    from mmf.datasets.processors import BaseProcessor
+    from VisualBERT.mmf.common.registry import registry
+    from VisualBERT.mmf.datasets.processors import BaseProcessor
 
     @registry.register_processor('my_processor')
     class MyProcessor(BaseProcessor):
@@ -79,13 +79,13 @@ from typing import Any, Dict, Union
 
 import numpy as np
 import torch
-from mmf.common.registry import registry
-from mmf.common.typings import ProcessorConfigType
-from mmf.utils.configuration import get_mmf_cache_dir, get_mmf_env
-from mmf.utils.distributed import is_master, synchronize
-from mmf.utils.file_io import PathManager
-from mmf.utils.text import VocabDict
-from mmf.utils.vocab import Vocab, WordToVectorDict
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.typings import ProcessorConfigType
+from VisualBERT.mmf.utils.configuration import get_mmf_cache_dir, get_mmf_env
+from VisualBERT.mmf.utils.distributed import is_master, synchronize
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.text import VocabDict
+from VisualBERT.mmf.utils.vocab import Vocab, WordToVectorDict
 
 
 logger = logging.getLogger(__name__)
@@ -189,7 +189,7 @@ class BatchProcessor(BaseProcessor):
 
         # Since build_processors also imports processor, import it at runtime to
         # avoid circular dependencies
-        from mmf.utils.build import build_processors
+        from VisualBERT.mmf.utils.build import build_processors
 
         self.processors = build_processors(processors_dict, **extra_params)
 
@@ -465,7 +465,7 @@ class FastTextProcessor(VocabProcessor):
         import requests
         from tqdm import tqdm
 
-        from mmf.common.constants import FASTTEXT_WIKI_URL
+        from VisualBERT.mmf.common.constants import FASTTEXT_WIKI_URL
 
         PathManager.mkdirs(os.path.dirname(model_file_path))
         response = requests.get(FASTTEXT_WIKI_URL, stream=True)
@@ -830,7 +830,7 @@ class SimpleWordProcessor(BaseProcessor):
     """
 
     def __init__(self, *args, **kwargs):
-        from mmf.utils.text import word_tokenize
+        from VisualBERT.mmf.utils.text import word_tokenize
 
         self.tokenizer = word_tokenize
 
@@ -848,7 +848,7 @@ class SimpleSentenceProcessor(BaseProcessor):
     """
 
     def __init__(self, *args, **kwargs):
-        from mmf.utils.text import tokenize
+        from VisualBERT.mmf.utils.text import tokenize
 
         self.tokenizer = tokenize
 
@@ -895,7 +895,7 @@ class BBoxProcessor(VocabProcessor):
     """
 
     def __init__(self, config, *args, **kwargs):
-        from mmf.utils.dataset import build_bbox_tensors
+        from VisualBERT.mmf.utils.dataset import build_bbox_tensors
 
         self.lambda_fn = build_bbox_tensors
         self._init_extras(config)
@@ -1160,7 +1160,7 @@ class PhocProcessor(VocabProcessor):
     """
 
     def __init__(self, config, *args, **kwargs):
-        from mmf.utils.phoc import build_phoc
+        from VisualBERT.mmf.utils.phoc import build_phoc
 
         self._build_phoc = build_phoc
         self._init_extras(config)

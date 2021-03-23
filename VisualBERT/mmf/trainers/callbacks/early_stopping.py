@@ -1,9 +1,9 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.trainers.callbacks.base import Callback
-from mmf.utils.checkpoint import consolidate_optim_state_dict
-from mmf.utils.distributed import broadcast_scalar
-from mmf.utils.early_stopping import EarlyStopping
+from VisualBERT.mmf.trainers.callbacks.base import Callback
+from VisualBERT.mmf.utils.checkpoint import consolidate_optim_state_dict
+from VisualBERT.mmf.utils.distributed import broadcast_scalar
+from VisualBERT.mmf.utils.early_stopping import EarlyStopping
 
 
 class EarlyStoppingCallback(Callback):

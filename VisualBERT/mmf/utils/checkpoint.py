@@ -8,12 +8,12 @@ import sys
 import warnings
 
 import torch
-from mmf.common.registry import registry
-from mmf.utils.configuration import get_mmf_env, load_yaml
-from mmf.utils.distributed import is_master, synchronize
-from mmf.utils.download import download_pretrained_model
-from mmf.utils.file_io import PathManager
-from mmf.utils.general import get_current_device, updir
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.utils.configuration import get_mmf_env, load_yaml
+from VisualBERT.mmf.utils.distributed import is_master, synchronize
+from VisualBERT.mmf.utils.download import download_pretrained_model
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.general import get_current_device, updir
 from omegaconf import OmegaConf
 
 

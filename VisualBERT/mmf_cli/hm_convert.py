@@ -7,9 +7,9 @@ import subprocess
 import warnings
 import zipfile
 
-from mmf.utils.configuration import Configuration
-from mmf.utils.download import copy, decompress, move
-from mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.configuration import Configuration
+from VisualBERT.mmf.utils.download import copy, decompress, move
+from VisualBERT.mmf.utils.file_io import PathManager
 
 
 class HMConverter:

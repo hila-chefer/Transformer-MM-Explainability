@@ -1,8 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.common.sample import SampleList
-from mmf.common.test_reporter import TestReporter
-from mmf.datasets.multi_dataset_loader import MultiDatasetLoader
+from VisualBERT.mmf.common.sample import SampleList
+from VisualBERT.mmf.common.test_reporter import TestReporter
+from VisualBERT.mmf.datasets.multi_dataset_loader import MultiDatasetLoader
 
 
 class DatasetLoader:

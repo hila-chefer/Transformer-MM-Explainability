@@ -8,7 +8,7 @@ from typing import Any
 import lmdb
 import numpy as np
 import torch
-from mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.file_io import PathManager
 
 
 def load_feat(feat_path: str, convert_to_tensor: bool = False) -> Any:

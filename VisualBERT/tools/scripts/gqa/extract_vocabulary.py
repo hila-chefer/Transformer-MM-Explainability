@@ -11,7 +11,7 @@ import json
 import os
 from collections import Counter
 
-from mmf.utils.text import tokenize
+from VisualBERT.mmf.utils.text import tokenize
 
 
 class ExtractVocabulary:

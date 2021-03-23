@@ -1,6 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.common.registry import registry
-from mmf.models.m4c import M4C
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.m4c import M4C
 
 
 @registry.register_model("m4c_captioner")

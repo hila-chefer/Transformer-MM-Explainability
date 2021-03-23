@@ -1,9 +1,9 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import torch
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.modules.embeddings import BiLSTMTextEmbedding
-from mmf.modules.layers import BCNet, BiAttention, FCNet, WeightNormClassifier
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.modules.embeddings import BiLSTMTextEmbedding
+from VisualBERT.mmf.modules.layers import BCNet, BiAttention, FCNet, WeightNormClassifier
 from torch import nn
 
 

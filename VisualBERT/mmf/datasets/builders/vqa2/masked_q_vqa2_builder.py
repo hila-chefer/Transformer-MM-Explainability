@@ -9,10 +9,10 @@
 import os
 import warnings
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.vqa2.builder import VQA2Builder
-from mmf.datasets.builders.vqa2.masked_q_vqa2_dataset import MaskedQVQA2Dataset
-from mmf.datasets.concat_dataset import MMFConcatDataset
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.vqa2.builder import VQA2Builder
+from VisualBERT.mmf.datasets.builders.vqa2.masked_q_vqa2_dataset import MaskedQVQA2Dataset
+from VisualBERT.mmf.datasets.concat_dataset import MMFConcatDataset
 
 
 @registry.register_builder("masked_q_vqa2")

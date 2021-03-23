@@ -8,10 +8,10 @@ from ast import literal_eval
 
 import demjson
 import torch
-from mmf.common.registry import registry
-from mmf.utils.env import import_user_module
-from mmf.utils.file_io import PathManager
-from mmf.utils.general import get_absolute_path, get_mmf_root
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.utils.env import import_user_module
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.general import get_absolute_path, get_mmf_root
 from omegaconf import OmegaConf
 
 

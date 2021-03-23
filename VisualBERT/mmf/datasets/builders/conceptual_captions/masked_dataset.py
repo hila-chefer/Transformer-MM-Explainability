@@ -1,6 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.datasets.builders.coco import MaskedCOCODataset
+from VisualBERT.mmf.datasets.builders.coco import MaskedCOCODataset
 
 
 class MaskedConceptualCaptionsDataset(MaskedCOCODataset):

@@ -4,7 +4,7 @@ import math
 from typing import Optional, Tuple, Type
 
 import torch
-from mmf.modules.layers import GatedTanh, ModalCombineLayer, TransformLayer
+from VisualBERT.mmf.modules.layers import GatedTanh, ModalCombineLayer, TransformLayer
 from torch import nn
 
 

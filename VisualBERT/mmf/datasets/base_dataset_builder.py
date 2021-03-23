@@ -17,8 +17,8 @@ Example::
 
     from torch.utils.data import Dataset
 
-    from mmf.datasets.base_dataset_builder import BaseDatasetBuilder
-    from mmf.common.registry import registry
+    from VisualBERT.mmf.datasets.base_dataset_builder import BaseDatasetBuilder
+    from VisualBERT.mmf.common.registry import registry
 
     @registry.register_builder("my")
     class MyBuilder(BaseDatasetBuilder):
@@ -35,7 +35,7 @@ Example::
 .. _here: https://github.com/facebookresearch/mmf/blob/master/mmf/datasets/vqa/vqa2/builder.py
 """
 
-from mmf.utils.distributed import is_master, synchronize
+from VisualBERT.mmf.utils.distributed import is_master, synchronize
 
 
 class BaseDatasetBuilder:

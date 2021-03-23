@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.common.registry import registry
-from mmf.datasets.builders.flickr30k.masked_dataset import MaskedFlickr30kDataset
-from mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.flickr30k.masked_dataset import MaskedFlickr30kDataset
+from VisualBERT.mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
 
 
 @registry.register_builder("masked_flickr30k")

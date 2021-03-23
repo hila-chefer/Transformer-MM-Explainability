@@ -1,10 +1,10 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
-from mmf.common.typings import MMFDatasetConfigType
-from mmf.datasets.builders.localized_narratives.masked_dataset import (
+from VisualBERT.mmf.common.typings import MMFDatasetConfigType
+from VisualBERT.mmf.datasets.builders.localized_narratives.masked_dataset import (
     MaskedLocalizedNarrativesDatasetMixin,
 )
-from mmf.datasets.mmf_dataset import MMFDataset
+from VisualBERT.mmf.datasets.mmf_dataset import MMFDataset
 
 
 class MaskedCoco2017Dataset(MaskedLocalizedNarrativesDatasetMixin, MMFDataset):

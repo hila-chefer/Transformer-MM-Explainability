@@ -4,8 +4,8 @@ import unittest
 
 import tests.test_utils as test_utils
 import torch
-from mmf.common.batch_collator import BatchCollator
-from mmf.common.sample import Sample
+from VisualBERT.mmf.common.batch_collator import BatchCollator
+from VisualBERT.mmf.common.sample import Sample
 
 
 class TestBatchCollator(unittest.TestCase):

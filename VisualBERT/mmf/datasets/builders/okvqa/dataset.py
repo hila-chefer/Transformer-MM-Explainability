@@ -2,10 +2,10 @@
 from typing import Type, Union
 
 import torch
-from mmf.common.sample import Sample
-from mmf.common.typings import MMFDatasetConfigType
-from mmf.datasets.builders.okvqa.database import OKVQAAnnotationDatabase
-from mmf.datasets.mmf_dataset import MMFDataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.common.typings import MMFDatasetConfigType
+from VisualBERT.mmf.datasets.builders.okvqa.database import OKVQAAnnotationDatabase
+from VisualBERT.mmf.datasets.mmf_dataset import MMFDataset
 
 
 class OKVQADataset(MMFDataset):

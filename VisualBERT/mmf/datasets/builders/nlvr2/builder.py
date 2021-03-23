@@ -5,9 +5,9 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-from mmf.common.registry import registry
-from mmf.datasets.builders.nlvr2.dataset import NLVR2Dataset
-from mmf.datasets.builders.vqa2.builder import VQA2Builder
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.builders.nlvr2.dataset import NLVR2Dataset
+from VisualBERT.mmf.datasets.builders.vqa2.builder import VQA2Builder
 
 
 @registry.register_builder("nlvr2")

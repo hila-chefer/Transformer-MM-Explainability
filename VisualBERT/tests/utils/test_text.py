@@ -5,11 +5,11 @@ import unittest
 import mmf.utils.text as text_utils
 import numpy as np
 import torch
-from mmf.common.registry import registry
-from mmf.common.sample import Sample, SampleList
-from mmf.utils.configuration import Configuration
-from mmf.utils.env import setup_imports
-from mmf.utils.general import get_mmf_root
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.sample import Sample, SampleList
+from VisualBERT.mmf.utils.configuration import Configuration
+from VisualBERT.mmf.utils.env import setup_imports
+from VisualBERT.mmf.utils.general import get_mmf_root
 from packaging.version import LegacyVersion
 from tests.test_utils import dummy_args
 from tests.utils.test_model import TestDecoderModel

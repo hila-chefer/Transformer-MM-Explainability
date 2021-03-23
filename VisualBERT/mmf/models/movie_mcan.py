@@ -5,17 +5,17 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import omegaconf
 import torch
-from mmf.common.registry import registry
-from mmf.common.typings import DictConfig
-from mmf.models.base_model import BaseModel
-from mmf.modules.embeddings import (
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.common.typings import DictConfig
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.modules.embeddings import (
     PreExtractedEmbedding,
     TextEmbedding,
     TwoBranchEmbedding,
 )
-from mmf.modules.layers import BranchCombineLayer, ClassifierLayer
-from mmf.utils.build import build_image_encoder
-from mmf.utils.general import filter_grads
+from VisualBERT.mmf.modules.layers import BranchCombineLayer, ClassifierLayer
+from VisualBERT.mmf.utils.build import build_image_encoder
+from VisualBERT.mmf.utils.general import filter_grads
 
 
 @registry.register_model("movie_mcan")

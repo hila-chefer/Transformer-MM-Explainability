@@ -1,7 +1,7 @@
 import random
 
-from mmf.common.sample import Sample
-from mmf.datasets.builders.vqa2.dataset import VQA2Dataset
+from VisualBERT.mmf.common.sample import Sample
+from VisualBERT.mmf.datasets.builders.vqa2.dataset import VQA2Dataset
 
 
 class MaskedMMImdbDataset(VQA2Dataset):

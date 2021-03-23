@@ -3,8 +3,8 @@
 import unittest
 
 import torch
-from mmf.models.mmbt import MMBT
-from mmf.utils.build import build_optimizer
+from VisualBERT.mmf.models.mmbt import MMBT
+from VisualBERT.mmf.utils.build import build_optimizer
 from omegaconf import OmegaConf
 from tests.test_utils import SimpleModel, skip_if_no_network
 

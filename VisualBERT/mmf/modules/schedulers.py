@@ -2,7 +2,7 @@
 
 from bisect import bisect_right
 
-from mmf.common.registry import registry
+from VisualBERT.mmf.common.registry import registry
 from torch.optim.lr_scheduler import LambdaLR
 from transformers.optimization import (
     get_cosine_schedule_with_warmup,
@@ -13,7 +13,7 @@ from transformers.optimization import (
 @registry.register_scheduler("pythia")
 class PythiaScheduler(LambdaLR):
     def __init__(self, optimizer, *args, **kwargs):
-        from mmf.utils.general import lr_lambda_update
+        from VisualBERT.mmf.utils.general import lr_lambda_update
 
         self._lambda_func = lr_lambda_update
         self._global_config = registry.get("config")

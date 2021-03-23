@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.common.registry import Registry
-from mmf.datasets.builders.vizwiz import VizWizBuilder
-from mmf.datasets.builders.vqa2.ocr_dataset import VQA2OCRDataset
+from VisualBERT.mmf.common.registry import Registry
+from VisualBERT.mmf.datasets.builders.vizwiz import VizWizBuilder
+from VisualBERT.mmf.datasets.builders.vqa2.ocr_dataset import VQA2OCRDataset
 
 
 @Registry.register_builder("vqa2_ocr")

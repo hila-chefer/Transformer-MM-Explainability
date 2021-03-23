@@ -1,5 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from mmf.datasets.databases.annotation_database import AnnotationDatabase
+from VisualBERT.mmf.datasets.databases.annotation_database import AnnotationDatabase
 
 
 class SceneGraphDatabase(AnnotationDatabase):

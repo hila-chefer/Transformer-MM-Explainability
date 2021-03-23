@@ -10,7 +10,7 @@ import tempfile
 import unittest
 
 import torch
-from mmf.common.sample import Sample, SampleList
+from VisualBERT.mmf.common.sample import Sample, SampleList
 
 
 def compare_tensors(a, b):
@@ -78,7 +78,7 @@ def compare_state_dicts(a, b):
 
 
 def build_random_sample_list():
-    from mmf.common.sample import Sample, SampleList
+    from VisualBERT.mmf.common.sample import Sample, SampleList
 
     first = Sample()
     first.x = random.randint(0, 100)

@@ -8,11 +8,11 @@ import os
 import sys
 from typing import Any, Dict, Union
 
-from mmf.common.registry import registry
-from mmf.utils.configuration import get_mmf_env
-from mmf.utils.distributed import get_rank, is_master
-from mmf.utils.file_io import PathManager
-from mmf.utils.timer import Timer
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.utils.configuration import get_mmf_env
+from VisualBERT.mmf.utils.distributed import get_rank, is_master
+from VisualBERT.mmf.utils.file_io import PathManager
+from VisualBERT.mmf.utils.timer import Timer
 from termcolor import colored
 
 

@@ -3,16 +3,16 @@ import copy
 
 import omegaconf
 import torch
-from mmf.common.registry import registry
-from mmf.models.base_model import BaseModel
-from mmf.modules.embeddings import (
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.models.base_model import BaseModel
+from VisualBERT.mmf.modules.embeddings import (
     ImageFeatureEmbedding,
     MultiHeadImageFeatureEmbedding,
     PreExtractedEmbedding,
     TextEmbedding,
 )
-from mmf.modules.layers import ClassifierLayer, ModalCombineLayer
-from mmf.utils.build import build_image_encoder
+from VisualBERT.mmf.modules.layers import ClassifierLayer, ModalCombineLayer
+from VisualBERT.mmf.utils.build import build_image_encoder
 from torch import nn
 
 

@@ -9,17 +9,17 @@ For implementing your own fusion technique, you need to follow these steps:
 
 .. code::
     from torch import nn
-    from mmf.common.registry import registry
-    from mmf.modules.fusions import Block
-    from mmf.modules.fusions import LinearSum
-    from mmf.modules.fusions import ConcatMLP
-    from mmf.modules.fusions import MLB
-    from mmf.modules.fusions import Mutan
-    from mmf.modules.fusions import Tucker
-    from mmf.modules.fusions import BlockTucker
-    from mmf.modules.fusions import MFH
-    from mmf.modules.fusions import MFB
-    from mmf.modules.fusions import MCB
+    from VisualBERT.mmf.common.registry import registry
+    from VisualBERT.mmf.modules.fusions import Block
+    from VisualBERT.mmf.modules.fusions import LinearSum
+    from VisualBERT.mmf.modules.fusions import ConcatMLP
+    from VisualBERT.mmf.modules.fusions import MLB
+    from VisualBERT.mmf.modules.fusions import Mutan
+    from VisualBERT.mmf.modules.fusions import Tucker
+    from VisualBERT.mmf.modules.fusions import BlockTucker
+    from VisualBERT.mmf.modules.fusions import MFH
+    from VisualBERT.mmf.modules.fusions import MFB
+    from VisualBERT.mmf.modules.fusions import MCB
 
     @regitery.register_fusion("custom")
     class CustomFusion(nn.Module):
@@ -30,8 +30,8 @@ For implementing your own fusion technique, you need to follow these steps:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from mmf.common.registry import registry
-from mmf.utils.general import get_chunks, get_sizes_list
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.utils.general import get_chunks, get_sizes_list
 
 
 class CompactBilinearPooling(nn.Module):
