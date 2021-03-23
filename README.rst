@@ -51,7 +51,7 @@ LXMERT
 
    .. note::
 
-      if you already downloaded `COCO_val2014` for the VisualBERT tests, you can simply use the same path you used for VisualBERT.
+      If you already downloaded `COCO_val2014` for the `VisualBERT`_ tests, you can simply use the same path you used for VisualBERT.
 
 #. Run the `perturbation.py` script as follows:
 
