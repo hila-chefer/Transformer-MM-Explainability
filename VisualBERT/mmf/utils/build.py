@@ -4,14 +4,14 @@ import os
 import warnings
 from typing import Any, Dict, Type, Union
 
-import mmf
+import VisualBERT.mmf
 import torch
-from mmf.common import typings as mmf_typings
-from mmf.common.registry import registry
-from mmf.datasets.processors.processors import Processor
-from mmf.utils.configuration import Configuration
-from mmf.utils.distributed import is_dist_initialized
-from mmf.utils.general import get_optimizer_parameters
+from VisualBERT.mmf.common import typings as mmf_typings
+from VisualBERT.mmf.common.registry import registry
+from VisualBERT.mmf.datasets.processors.processors import Processor
+from VisualBERT.mmf.utils.configuration import Configuration
+from VisualBERT.mmf.utils.distributed import is_dist_initialized
+from VisualBERT.mmf.utils.general import get_optimizer_parameters
 from omegaconf import DictConfig, OmegaConf
 
 

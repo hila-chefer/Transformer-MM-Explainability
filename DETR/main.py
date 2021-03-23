@@ -10,7 +10,6 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader, DistributedSampler
 
-import DETR.datasets
 import DETR.util.misc as utils
 from DETR.datasets import build_dataset, get_coco_api_from_dataset
 from DETR.engine import evaluate, train_one_epoch
