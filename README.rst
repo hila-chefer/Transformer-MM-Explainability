@@ -1,5 +1,5 @@
-Generic Attention-model Explainability for InterpretingBi-Modal and Encoder-Decoder Transformers
-================================================================================================
+Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers
+=================================================================================================
 
 .. sectnum::
 
