@@ -8,12 +8,12 @@ Running Examples
 
 Notice that we have two `jupyter` notebooks to run the examples presented in the paper.
 
-* `The notebook for LXMERT<./LXMERT.ipynb>`_ contains both the examples from the paper and examples with images from the internet and free form questions.
+* `The notebook for LXMERT <./LXMERT.ipynb>`_ contains both the examples from the paper and examples with images from the internet and free form questions.
   To use your own input, simply change the `URL` variable to your image and the `question` variable to your free form question.
 
   .. image:: LXMERT.PNG
 
-* `The notebook for DETR<./DETR.ipynb>`_ contains the examples from the paper.
+* `The notebook for DETR <./DETR.ipynb>`_ contains the examples from the paper.
   To use your own input, simply change the `URL` variable to your image.
 
   .. image:: DETR.PNG
@@ -77,6 +77,6 @@ DETR
 Credits
 -------
 
-* VisualBERT implementation is based on the `MMF<https://github.com/facebookresearch/mmf>`_ framework.
-* LXMERT implementation is based on the `offical LXMERT<https://github.com/airsplay/lxmert>`_ implementation and on `Hugging Face Transformers<https://github.com/huggingface/transformers>`_.
-* DETR implementation is based on the `offical DETR<https://github.com/facebookresearch/detr>`_ implementation
+* VisualBERT implementation is based on the `MMF <https://github.com/facebookresearch/mmf>`_ framework.
+* LXMERT implementation is based on the `offical LXMERT <https://github.com/airsplay/lxmert>`_ implementation and on `Hugging Face Transformers <https://github.com/huggingface/transformers>`_.
+* DETR implementation is based on the `offical DETR <https://github.com/facebookresearch/detr>`_ implementation
