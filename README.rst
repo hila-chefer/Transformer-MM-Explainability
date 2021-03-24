@@ -69,14 +69,24 @@ DETR
 #. Download the COCO dataset as described in the `DETR repository <https://github.com/facebookresearch/detr#data-preparation>`_.
    Notice you only need the validation set.
    
-#. Lower IoU minimum threshold from 0.5 to 0.2:
+#. Lower the IoU minimum threshold from 0.5 to 0.2 using the following steps:
 
-   * Locate the `cocoeval.py` script in your package lib directory:
+ * Locate the `cocoeval.py` script in your python library path:
+      find library path:
+      
+      .. code-block:: python
+
+         import sys
+         print(sys.path)
+      
+      find `cocoeval.py`:
+      
       .. code-block:: bash
-
+      
+         cd /path/to/lib
          find -name cocoeval.py
          
-   * Change the `self.iouThrs` value in the `setDetParams` function (which sets the parameters for the COCO detection evaluation) in the `Params` class as follows:
+ * Change the `self.iouThrs` value in the `setDetParams` function (which sets the parameters for the COCO detection evaluation) in the `Params` class as follows:
       insead of:
     
       .. code-block:: python
