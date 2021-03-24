@@ -44,8 +44,9 @@ LXMERT
 
     .. code-block:: bash
 
-      cd data/vqa
+      pushd data/vqa
       wget https://nlp.cs.unc.edu/data/lxmert_data/vqa/valid.json
+      popd
 
 #. Download the `COCO_val2014` set to your local machine.
 
