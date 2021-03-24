@@ -70,18 +70,18 @@ DETR
    Notice you only need the validation set.
    
 #. Lower the IoU minimum threshold from 0.5 to 0.2 using the following steps:
-
+         
    * Locate the `cocoeval.py` script in your python library path:
       
-      find library path:
-      
+     find library path:
+    
       .. code-block:: python
 
          import sys
          print(sys.path)
-      
-      find `cocoeval.py`:
-      
+         
+     find `cocoeval.py`: 
+  
       .. code-block:: bash
       
          cd /path/to/lib
@@ -89,12 +89,12 @@ DETR
          
    * Change the `self.iouThrs` value in the `setDetParams` function (which sets the parameters for the COCO detection evaluation) in the `Params` class as follows:
       
-      insead of:
+     insead of:
     
       .. code-block:: python
 
        self.iouThrs = np.linspace(.5, 0.95, int(np.round((0.95 - .5) / .05)) + 1, endpoint=True)
-      use: 
+     use: 
   
       .. code-block:: python
 
