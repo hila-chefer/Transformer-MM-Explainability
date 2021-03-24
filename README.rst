@@ -75,15 +75,16 @@ DETR
       .. code-block:: bash
 
          find -name cocoeval.py
+         
    * Change the `self.iouThrs` value in the `setDetParams` function (which sets the parameters for the COCO detection evaluation) in the `Params` class as follows:
       insead of:
     
-      .. code-block:: bash
+      .. code-block:: python
 
        self.iouThrs = np.linspace(.5, 0.95, int(np.round((0.95 - .5) / .05)) + 1, endpoint=True)
       use: 
   
-      .. code-block:: bash
+      .. code-block:: python
 
        self.iouThrs = np.linspace(.2, 0.95, int(np.round((0.95 - .2) / .05)) + 1, endpoint=True)
 
