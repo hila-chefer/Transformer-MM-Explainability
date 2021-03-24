@@ -72,19 +72,18 @@ DETR
 #. Lower IoU minimum threshold from 0.5 to 0.2:
 
    * Locate the `cocoeval.py` script in your package lib directory:
-    .. code-block:: bash
+      .. code-block:: bash
 
          find -name cocoeval.py
-         
-  * Change the `self.iouThrs` value in the `setDetParams` function (which sets the parameters for the COCO detection evaluation) in the `Params` class as follows:
-    insead of:
+   * Change the `self.iouThrs` value in the `setDetParams` function (which sets the parameters for the COCO detection evaluation) in the `Params` class as follows:
+      insead of:
     
-    .. code-block:: bash
+      .. code-block:: bash
 
        self.iouThrs = np.linspace(.5, 0.95, int(np.round((0.95 - .5) / .05)) + 1, endpoint=True)
-    use: 
+      use: 
   
-    .. code-block:: bash
+      .. code-block:: bash
 
        self.iouThrs = np.linspace(.2, 0.95, int(np.round((0.95 - .2) / .05)) + 1, endpoint=True)
 
