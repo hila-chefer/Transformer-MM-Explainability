@@ -13,6 +13,8 @@ Notice that we have two `jupyter` notebooks to run the examples presented in the
 
   .. image:: LXMERT.PNG
 
+  .. image:: LXMERT-web.PNG
+
 * `The notebook for DETR <./DETR.ipynb>`_ contains the examples from the paper.
   To use your own input, simply change the `URL` variable to your image.
 
