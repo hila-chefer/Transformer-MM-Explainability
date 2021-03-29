@@ -1,5 +1,9 @@
 Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers
 =================================================================================================
+|facebook|
+
+.. |facebook| image:: https://colab.research.google.com/assets/colab-badge.svg
+                   :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/Transformer_MM_Explainability.ipynb
 
 .. sectnum::
 
