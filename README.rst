@@ -124,3 +124,17 @@ Credits
 * VisualBERT implementation is based on the `MMF <https://github.com/facebookresearch/mmf>`_ framework.
 * LXMERT implementation is based on the `offical LXMERT <https://github.com/airsplay/lxmert>`_ implementation and on `Hugging Face Transformers <https://github.com/huggingface/transformers>`_.
 * DETR implementation is based on the `offical DETR <https://github.com/facebookresearch/detr>`_ implementation
+
+
+Citing our paper
+----------------
+
+If you find this work useful please consider citing it:
+```
+@article{chefer2021attentionExplainability,
+  title={Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers},
+  author={Chefer, Hila and Gur, Shir and Wolf, Lior},
+  journal={arXiv preprint arXiv},
+  year={2021}
+}
+```
