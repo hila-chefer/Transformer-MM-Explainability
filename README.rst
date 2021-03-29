@@ -7,6 +7,12 @@ Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Dec
 
 .. sectnum::
 
+Using Colab
+----------------
+
+* Please notice that the notebook assumes that you are using a GPU. To switch runtime go to Runtime -> change runtime type and select GPU.
+* Installing all the requirements may take some time. After installation, please restart the runtime.
+
 Running Examples
 ----------------
 
