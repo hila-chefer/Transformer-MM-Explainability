@@ -1,5 +1,5 @@
-Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers
-=================================================================================================
+PyTorch Implementation of `Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers <https://arxiv.org/abs/2103.15679>`_
+=================================================================================================================================================================
 |facebook|
 
 .. |facebook| image:: https://colab.research.google.com/assets/colab-badge.svg
