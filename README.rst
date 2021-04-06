@@ -1,9 +1,21 @@
 PyTorch Implementation of `Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers <https://arxiv.org/abs/2103.15679>`_
 =================================================================================================================================================================
-|facebook|
 
-.. |facebook| image:: https://colab.research.google.com/assets/colab-badge.svg
+Notebooks for LXMERT + DETR:
+----------------------------
+
+|DETR_LXMERT|
+
+.. |DETR_LXMERT| image:: https://colab.research.google.com/assets/colab-badge.svg
                    :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/Transformer_MM_Explainability.ipynb
+
+Notebooks for CLIP:
+----------------------------
+
+|CLIP|
+
+.. |CLIP| image:: https://colab.research.google.com/assets/colab-badge.svg
+                   :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/CLIP_explainability.ipynb
 
 .. sectnum::
 
