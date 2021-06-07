@@ -9,13 +9,21 @@ Notebooks for LXMERT + DETR:
 .. |DETR_LXMERT| image:: https://colab.research.google.com/assets/colab-badge.svg
                    :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/Transformer_MM_Explainability.ipynb
 
-Notebooks for CLIP:
+Notebook for CLIP:
 ----------------------------
 
 |CLIP|
 
 .. |CLIP| image:: https://colab.research.google.com/assets/colab-badge.svg
                    :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/CLIP_explainability.ipynb
+
+Notebook for ViT:
+----------------------------
+
+|ViT|
+
+.. |ViT| image:: https://colab.research.google.com/assets/colab-badge.svg
+                   :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/Transformer_MM_explainability_ViT.ipynb
 
 .. sectnum::
 
