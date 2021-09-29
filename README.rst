@@ -1,8 +1,6 @@
 [ICCV 2021- Oral] PyTorch Implementation of `Generic Attention-model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers <https://arxiv.org/abs/2103.15679>`_
 =================================================================================================================================================================
 
-Notebooks for LXMERT + DETR:
-----------------------------
 |youtube|
 
 .. |youtube| image:: https://img.shields.io/static/v1?label=ICCV2021&message=12MinuteVideo&color=red
