@@ -3,6 +3,13 @@
 
 Notebooks for LXMERT + DETR:
 ----------------------------
+|youtube|
+
+.. |youtube| image:: https://img.shields.io/static/v1?label=ICCV2021&message=12MinuteVideo&color=red
+                   :target: https://www.youtube.com/watch?v=bQTL34Dln-M
+
+Notebooks for LXMERT + DETR:
+----------------------------
 
 |DETR_LXMERT|
 
