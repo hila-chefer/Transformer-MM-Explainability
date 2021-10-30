@@ -148,16 +148,16 @@ Citing
 
 If you make use of our work, please cite our paper:
 
-     .. code-block:: 
+    .. code-block:: latex
 
        @InProceedings{Chefer_2021_ICCV,
-        author    = {Chefer, Hila and Gur, Shir and Wolf, Lior},
-        title     = {Generic Attention-Model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers},
-        booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-        month     = {October},
-        year      = {2021},
-        pages     = {397-406}
-    }
+          author    = {Chefer, Hila and Gur, Shir and Wolf, Lior},
+          title     = {Generic Attention-Model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers},
+          booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+          month     = {October},
+          year      = {2021},
+          pages     = {397-406}
+       }
 
 
 Credits
