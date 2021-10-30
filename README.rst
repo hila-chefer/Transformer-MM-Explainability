@@ -143,6 +143,23 @@ DETR
 
        CUDA_VISIBLE_DEVICES=0 PYTHONPATH=`pwd`  python DETR/main.py --coco_path /path/to/coco/dataset  --eval --masks --resume https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth --batch_size 1 --method <method_name>
 
+Citing
+-------
+
+If you make use of our work, please cite our paper:
+
+     .. code-block:: 
+
+       @InProceedings{Chefer_2021_ICCV,
+        author    = {Chefer, Hila and Gur, Shir and Wolf, Lior},
+        title     = {Generic Attention-Model Explainability for Interpreting Bi-Modal and Encoder-Decoder Transformers},
+        booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+        month     = {October},
+        year      = {2021},
+        pages     = {397-406}
+    }
+
+
 Credits
 -------
 
@@ -150,4 +167,3 @@ Credits
 * LXMERT implementation is based on the `offical LXMERT <https://github.com/airsplay/lxmert>`_ implementation and on `Hugging Face Transformers <https://github.com/huggingface/transformers>`_.
 * DETR implementation is based on the `offical DETR <https://github.com/facebookresearch/detr>`_ implementation.
 * CLIP implementation is based on the `offical CLIP <https://github.com/openai/CLIP>`_ implementation.
-
