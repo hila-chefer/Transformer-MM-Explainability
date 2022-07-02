@@ -22,6 +22,14 @@ Notebook for CLIP:
 .. |CLIP| image:: https://colab.research.google.com/assets/colab-badge.svg
                    :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/CLIP_explainability.ipynb
 
+
+
+**Demo**: You can check out a demo for CLIP model on [Huggingface spaces](https://huggingface.co/spaces/PaulHilders/CLIPGroundingExplainability).
+<p>
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/19412343/176676771-d26f2146-9901-49e7-99be-b030f3d790de.png">
+</p>
+
+
 Notebook for ViT:
 ----------------------------
 
@@ -31,13 +39,6 @@ Notebook for ViT:
                    :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/Transformer_MM_explainability_ViT.ipynb
 
 .. sectnum::
-
-|Demo|
-
-You can check out a demo for CLIP model on [Huggingface spaces](https://huggingface.co/spaces/PaulHilders/CLIPGroundingExplainability).
-<p>
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/19412343/176676771-d26f2146-9901-49e7-99be-b030f3d790de.png">
-</p>
 
 
 Using Colab
