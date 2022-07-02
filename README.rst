@@ -22,7 +22,7 @@ Notebook for CLIP:
 .. |CLIP| image:: https://colab.research.google.com/assets/colab-badge.svg
                    :target: https://colab.research.google.com/github/hila-chefer/Transformer-MM-Explainability/blob/main/CLIP_explainability.ipynb
 
-**Demo**: You can check out a demo on `Huggingface spaces <https://huggingface.co/spaces/PaulHilders/CLIPGroundingExplainability>`_.
+**Demo**: You can check out a demo on `Huggingface spaces <https://huggingface.co/spaces/PaulHilders/CLIPGroundingExplainability>`_ or scan the following QR code.
 
 .. image:: https://user-images.githubusercontent.com/19412343/176676771-d26f2146-9901-49e7-99be-b030f3d790de.png
    :width: 100
