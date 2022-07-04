@@ -174,3 +174,4 @@ Credits
 * LXMERT implementation is based on the `offical LXMERT <https://github.com/airsplay/lxmert>`_ implementation and on `Hugging Face Transformers <https://github.com/huggingface/transformers>`_.
 * DETR implementation is based on the `offical DETR <https://github.com/facebookresearch/detr>`_ implementation.
 * CLIP implementation is based on the `offical CLIP <https://github.com/openai/CLIP>`_ implementation.
+* The CLIP huggingface spaces demo was made by Paul Hilders, Danilo de Goede, and Piyush Bagad from the University of Amsterdam as part of their `final project <https://github.com/bpiyush/CLIP-grounding>`_.
