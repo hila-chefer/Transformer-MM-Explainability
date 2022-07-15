@@ -13,7 +13,7 @@ from torch.nn import functional as F
 # We define this function as _pad because it takes an argument
 # named pad, which clobbers the recursive reference to the pad
 # function needed for __torch_function__ support
-pad = F._pad
+#pad = F._pad
 
 # This class exists solely for Transformer; it has an annotation stating
 # that bias is never None, which appeases TorchScript
